@@ -1,0 +1,918 @@
+2024-06-04T15:26:42.943+0700 [INFO]  Terraform version: 1.7.5
+2024-06-04T15:26:42.943+0700 [DEBUG] using github.com/hashicorp/go-tfe v1.41.0
+2024-06-04T15:26:42.943+0700 [DEBUG] using github.com/hashicorp/hcl/v2 v2.19.1
+2024-06-04T15:26:42.943+0700 [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.1
+2024-06-04T15:26:42.943+0700 [DEBUG] using github.com/zclconf/go-cty v1.14.1
+2024-06-04T15:26:42.943+0700 [INFO]  Go runtime version: go1.21.8
+2024-06-04T15:26:42.943+0700 [INFO]  CLI args: []string{"terraform", "plan"}
+2024-06-04T15:26:42.943+0700 [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2024-06-04T15:26:42.943+0700 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2024-06-04T15:26:42.943+0700 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2024-06-04T15:26:42.943+0700 [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2024-06-04T15:26:42.943+0700 [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2024-06-04T15:26:42.943+0700 [DEBUG] ignoring non-existing provider search directory /root/.local/share/flatpak/exports/share/terraform/plugins
+2024-06-04T15:26:42.943+0700 [DEBUG] ignoring non-existing provider search directory /var/lib/flatpak/exports/share/terraform/plugins
+2024-06-04T15:26:42.943+0700 [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2024-06-04T15:26:42.943+0700 [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2024-06-04T15:26:42.944+0700 [INFO]  CLI command args: []string{"plan"}
+2024-06-04T15:26:42.955+0700 [DEBUG] backend-s3.aws-base: Resolving credentials provider: tf_backend.operation=Configure tf_backend.req_id=248af59d-6037-9db5-9c67-1d2147c306ef tf_backend.s3.bucket=terraformstatemybucket008888 tf_backend.s3.path=terraformstatefile
+2024-06-04T15:26:42.955+0700 [DEBUG] backend-s3.aws-base: Setting profile: tf_backend.operation=Configure tf_backend.req_id=248af59d-6037-9db5-9c67-1d2147c306ef tf_backend.s3.bucket=terraformstatemybucket008888 tf_backend.s3.path=terraformstatefile tf_aws.profile=default tf_aws.profile.source=provider
+2024-06-04T15:26:42.955+0700 [DEBUG] backend-s3.aws-base: Loading configuration: tf_backend.operation=Configure tf_backend.req_id=248af59d-6037-9db5-9c67-1d2147c306ef tf_backend.s3.bucket=terraformstatemybucket008888 tf_backend.s3.path=terraformstatefile
+2024-06-04T15:26:42.955+0700 [DEBUG] backend-s3.aws-base: Retrieving credentials: tf_backend.operation=Configure tf_backend.req_id=248af59d-6037-9db5-9c67-1d2147c306ef tf_backend.s3.bucket=terraformstatemybucket008888 tf_backend.s3.path=terraformstatefile
+2024-06-04T15:26:42.955+0700 [INFO]  backend-s3.aws-base: Retrieved credentials: tf_backend.operation=Configure tf_backend.req_id=248af59d-6037-9db5-9c67-1d2147c306ef tf_backend.s3.bucket=terraformstatemybucket008888 tf_backend.s3.path=terraformstatefile tf_aws.credentials_source="SharedConfigCredentials: /root/.aws/credentials"
+2024-06-04T15:26:42.955+0700 [DEBUG] backend-s3.aws-base: Loading configuration: tf_backend.operation=Configure tf_backend.req_id=248af59d-6037-9db5-9c67-1d2147c306ef tf_backend.s3.bucket=terraformstatemybucket008888 tf_backend.s3.path=terraformstatefile
+2024-06-04T15:26:42.955+0700 [DEBUG] backend-s3.aws-base: Retrieving caller identity from STS: tf_backend.operation=Configure tf_backend.req_id=248af59d-6037-9db5-9c67-1d2147c306ef tf_backend.s3.bucket=terraformstatemybucket008888 tf_backend.s3.path=terraformstatefile
+2024-06-04T15:26:42.956+0700 [DEBUG] backend-s3.aws-base: HTTP Request Sent: aws.region=us-east-1 rpc.method=GetCallerIdentity rpc.service=STS rpc.system=aws-api tf_aws.sdk=aws-sdk-go-v2 tf_aws.signing_region="" tf_backend.operation=Configure tf_backend.req_id=248af59d-6037-9db5-9c67-1d2147c306ef tf_backend.s3.bucket=terraformstatemybucket008888 tf_backend.s3.path=terraformstatefile http.request.header.amz_sdk_request="attempt=1; max=5" http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.7.5 (+https://www.terraform.io) aws-sdk-go-v2/1.25.3 os/linux lang/go#1.21.8 md/GOOS#linux md/GOARCH#386 api/sts#1.28.4" http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************YSN6/20240604/us-east-1/sts/aws4_request, SignedHeaders=amz-sdk-invocation-id;amz-sdk-request;content-length;content-type;host;x-amz-date, Signature=*****" http.request.header.x_amz_date=20240604T082642Z http.request.header.content_type=application/x-www-form-urlencoded http.request.header.amz_sdk_invocation_id=42b39e82-452d-4290-b84d-6ff0ad80d01a
+  http.request.body=
+  | Action=GetCallerIdentity&Version=2011-06-15
+   http.method=POST http.url=https://sts.us-east-1.amazonaws.com/ net.peer.name=sts.us-east-1.amazonaws.com http.request_content_length=43
+2024-06-04T15:26:44.976+0700 [DEBUG] backend-s3.aws-base: HTTP Response Received: aws.region=us-east-1 rpc.method=GetCallerIdentity rpc.service=STS rpc.system=aws-api tf_aws.sdk=aws-sdk-go-v2 tf_aws.signing_region="" tf_backend.operation=Configure tf_backend.req_id=248af59d-6037-9db5-9c67-1d2147c306ef tf_backend.s3.bucket=terraformstatemybucket008888 tf_backend.s3.path=terraformstatefile http.duration=2019 http.status_code=200 http.response_content_length=411 http.response.header.x_amzn_requestid=a5987554-1cf3-43ca-ba50-38a94bd248af http.response.header.content_type=text/xml http.response.header.date="Tue, 04 Jun 2024 08:26:44 GMT"
+  http.response.body=
+  | <GetCallerIdentityResponse xmlns="https://sts.amazonaws.com/doc/2011-06-15/">
+  |   <GetCallerIdentityResult>
+  |     <Arn>arn:aws:iam::959764676190:user/terraform-User</Arn>
+  |     <UserId>AIDA*************RSTX</UserId>
+  |     <Account>959764676190</Account>
+  |   </GetCallerIdentityResult>
+  |   <ResponseMetadata>
+  |     <RequestId>a5987554-1cf3-43ca-ba50-38a94bd248af</RequestId>
+  |   </ResponseMetadata>
+  | </GetCallerIdentityResponse>
+  
+2024-06-04T15:26:44.976+0700 [INFO]  backend-s3.aws-base: Retrieved caller identity from STS: tf_backend.operation=Configure tf_backend.req_id=248af59d-6037-9db5-9c67-1d2147c306ef tf_backend.s3.bucket=terraformstatemybucket008888 tf_backend.s3.path=terraformstatefile
+2024-06-04T15:26:44.976+0700 [DEBUG] backend-s3.aws-base: Retrieving caller identity from STS: tf_backend.operation=Configure tf_backend.req_id=248af59d-6037-9db5-9c67-1d2147c306ef tf_backend.s3.bucket=terraformstatemybucket008888 tf_backend.s3.path=terraformstatefile
+2024-06-04T15:26:44.976+0700 [DEBUG] backend-s3.aws-base: HTTP Request Sent: aws.region=us-east-1 rpc.method=GetCallerIdentity rpc.service=STS rpc.system=aws-api tf_aws.sdk=aws-sdk-go-v2 tf_aws.signing_region="" tf_backend.operation=Configure tf_backend.req_id=248af59d-6037-9db5-9c67-1d2147c306ef tf_backend.s3.bucket=terraformstatemybucket008888 tf_backend.s3.path=terraformstatefile net.peer.name=sts.us-east-1.amazonaws.com http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.7.5 (+https://www.terraform.io) aws-sdk-go-v2/1.25.3 os/linux lang/go#1.21.8 md/GOOS#linux md/GOARCH#386 api/sts#1.28.4" http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************YSN6/20240604/us-east-1/sts/aws4_request, SignedHeaders=amz-sdk-invocation-id;amz-sdk-request;content-length;content-type;host;x-amz-date, Signature=*****" http.request.header.amz_sdk_invocation_id=5926ce16-c093-48ac-ad71-b889d9265ba4 http.request.header.x_amz_date=20240604T082644Z http.method=POST http.request_content_length=43 http.request.header.amz_sdk_request="attempt=1; max=5" http.request.header.content_type=application/x-www-form-urlencoded
+  http.request.body=
+  | Action=GetCallerIdentity&Version=2011-06-15
+   http.url=https://sts.us-east-1.amazonaws.com/
+2024-06-04T15:26:45.660+0700 [DEBUG] backend-s3.aws-base: HTTP Response Received: aws.region=us-east-1 rpc.method=GetCallerIdentity rpc.service=STS rpc.system=aws-api tf_aws.sdk=aws-sdk-go-v2 tf_aws.signing_region="" tf_backend.operation=Configure tf_backend.req_id=248af59d-6037-9db5-9c67-1d2147c306ef tf_backend.s3.bucket=terraformstatemybucket008888 tf_backend.s3.path=terraformstatefile http.duration=682 http.status_code=200 http.response_content_length=411 http.response.header.content_type=text/xml http.response.header.date="Tue, 04 Jun 2024 08:26:44 GMT" http.response.header.x_amzn_requestid=d0c9fe43-54d3-49a3-8e0d-662ba5438d5d
+  http.response.body=
+  | <GetCallerIdentityResponse xmlns="https://sts.amazonaws.com/doc/2011-06-15/">
+  |   <GetCallerIdentityResult>
+  |     <Arn>arn:aws:iam::959764676190:user/terraform-User</Arn>
+  |     <UserId>AIDA*************RSTX</UserId>
+  |     <Account>959764676190</Account>
+  |   </GetCallerIdentityResult>
+  |   <ResponseMetadata>
+  |     <RequestId>d0c9fe43-54d3-49a3-8e0d-662ba5438d5d</RequestId>
+  |   </ResponseMetadata>
+  | </GetCallerIdentityResponse>
+  
+2024-06-04T15:26:45.660+0700 [INFO]  backend-s3.aws-base: Retrieved caller identity from STS: tf_backend.operation=Configure tf_backend.req_id=248af59d-6037-9db5-9c67-1d2147c306ef tf_backend.s3.bucket=terraformstatemybucket008888 tf_backend.s3.path=terraformstatefile
+2024-06-04T15:26:49.287+0700 [DEBUG] checking for provisioner in "."
+2024-06-04T15:26:49.287+0700 [DEBUG] checking for provisioner in "/usr/local/bin"
+2024-06-04T15:26:49.290+0700 [INFO]  backend/local: starting Plan operation
+2024-06-04T15:26:49.291+0700 [DEBUG] backend-s3: HTTP Request Sent: aws.region=us-east-1 aws.s3.bucket=terraformstatemybucket008888 rpc.method=ListObjectsV2 rpc.service=S3 rpc.system=aws-api tf_aws.sdk=aws-sdk-go-v2 tf_aws.signing_region="" tf_backend.operation=Workspaces tf_backend.req_id=0febeb48-7d82-3df3-2cc5-5d17c756c322 tf_backend.s3.bucket=terraformstatemybucket008888 tf_backend.workspace-prefix=env:/ http.request.header.x_amz_content_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 http.url="https://terraformstatemybucket008888.s3.us-east-1.amazonaws.com/?list-type=2&max-keys=1000&prefix=env%3A%2F" http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.7.5 (+https://www.terraform.io) aws-sdk-go-v2/1.25.3 os/linux lang/go#1.21.8 md/GOOS#linux md/GOARCH#386 api/s3#1.51.4" http.request.header.accept_encoding=identity http.request.header.amz_sdk_request="attempt=1; max=5" http.request.header.x_amz_date=20240604T082649Z http.request.header.amz_sdk_invocation_id=5c63eeea-5e5d-432a-ad88-944651cd6579 http.request.body="" http.method=GET net.peer.name=terraformstatemybucket008888.s3.us-east-1.amazonaws.com http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************YSN6/20240604/us-east-1/s3/aws4_request, SignedHeaders=accept-encoding;amz-sdk-invocation-id;amz-sdk-request;host;x-amz-content-sha256;x-amz-date, Signature=*****"
+2024-06-04T15:26:50.982+0700 [DEBUG] backend-s3: HTTP Response Received: aws.region=us-east-1 aws.s3.bucket=terraformstatemybucket008888 rpc.method=ListObjectsV2 rpc.service=S3 rpc.system=aws-api tf_aws.sdk=aws-sdk-go-v2 tf_aws.signing_region="" tf_backend.operation=Workspaces tf_backend.req_id=0febeb48-7d82-3df3-2cc5-5d17c756c322 tf_backend.s3.bucket=terraformstatemybucket008888 tf_backend.workspace-prefix=env:/ http.response.header.server=AmazonS3 http.response.header.date="Tue, 04 Jun 2024 08:26:51 GMT" http.response.header.content_type=application/xml
+  http.response.body=
+  | <?xml version="1.0" encoding="UTF-8"?>
+  | <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>terraformstatemybucket008888</Name><Prefix>env:/</Prefix><KeyCount>0</KeyCount><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated></ListBucketResult>
+   http.duration=1690 http.status_code=200 http.response.header.x_amz_id_2="xjY5IDqVoM6hLhoWn4oALpGlFb3VJ4CU9DoxUwKSIqI6YwTPkq/2dy0No+t4NA03uMiz2HcQXCE=" http.response.header.x_amz_request_id=E5B5DNP2P2QPAK61 http.response.header.x_amz_bucket_region=us-east-1
+2024-06-04T15:26:50.983+0700 [INFO]  backend-s3: Downloading remote state: tf_backend.operation=Get tf_backend.req_id=0dbbb6dd-08ce-48ff-090e-0e60b06f0def tf_backend.s3.bucket=terraformstatemybucket008888 tf_backend.s3.path=terraformstatefile
+2024-06-04T15:26:50.983+0700 [DEBUG] backend-s3: HTTP Request Sent: aws.region=us-east-1 aws.s3.bucket=terraformstatemybucket008888 aws.s3.key=terraformstatefile rpc.method=HeadObject rpc.service=S3 rpc.system=aws-api tf_aws.sdk=aws-sdk-go-v2 tf_aws.signing_region="" tf_backend.operation=Get tf_backend.req_id=0dbbb6dd-08ce-48ff-090e-0e60b06f0def tf_backend.s3.bucket=terraformstatemybucket008888 tf_backend.s3.path=terraformstatefile http.method=HEAD http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.7.5 (+https://www.terraform.io) aws-sdk-go-v2/1.25.3 os/linux lang/go#1.21.8 md/GOOS#linux md/GOARCH#386 api/s3#1.51.4" http.request.body="" http.request.header.amz_sdk_request="attempt=1; max=5" http.url=https://terraformstatemybucket008888.s3.us-east-1.amazonaws.com/terraformstatefile net.peer.name=terraformstatemybucket008888.s3.us-east-1.amazonaws.com http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************YSN6/20240604/us-east-1/s3/aws4_request, SignedHeaders=accept-encoding;amz-sdk-invocation-id;amz-sdk-request;host;x-amz-content-sha256;x-amz-date, Signature=*****" http.request.header.x_amz_date=20240604T082650Z http.request.header.x_amz_content_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 http.request.header.amz_sdk_invocation_id=ae0886f1-c009-42e8-882e-85b3dad3e84f http.request.header.accept_encoding=identity
+2024-06-04T15:26:51.428+0700 [DEBUG] backend-s3: HTTP Response Received: aws.region=us-east-1 aws.s3.bucket=terraformstatemybucket008888 aws.s3.key=terraformstatefile rpc.method=HeadObject rpc.service=S3 rpc.system=aws-api tf_aws.sdk=aws-sdk-go-v2 tf_aws.signing_region="" tf_backend.operation=Get tf_backend.req_id=0dbbb6dd-08ce-48ff-090e-0e60b06f0def tf_backend.s3.bucket=terraformstatemybucket008888 tf_backend.s3.path=terraformstatefile http.status_code=200 http.response_content_length=182 http.response.header.content_encoding="" http.response.header.content_type=application/json http.response.header.server=AmazonS3 http.response.header.last_modified="Tue, 04 Jun 2024 07:45:13 GMT" http.response.header.etag="\"455e69b538dedf6d12872d9083ec788a\"" http.response.header.accept_ranges=bytes http.response.body="" http.duration=444 http.response.header.x_amz_request_id=21G5R063M0QKHHMP http.response.header.x_amz_id_2="P5edc5CwVBvCDkV2kJ8wn9PgYt13ZBre8Z3qfKS4BlbXh8tjMGnd1g+WWuX4qOQBlnfZtw7DNhM=" http.response.header.date="Tue, 04 Jun 2024 08:26:52 GMT" http.response.header.x_amz_server_side_encryption=AES256
+2024-06-04T15:26:51.428+0700 [DEBUG] backend-s3: HTTP Request Sent: aws.region=us-east-1 aws.s3.bucket=terraformstatemybucket008888 aws.s3.key=terraformstatefile rpc.method=GetObject rpc.service=S3 rpc.system=aws-api tf_aws.sdk=aws-sdk-go-v2 tf_aws.signing_region="" tf_backend.operation=Get tf_backend.req_id=0dbbb6dd-08ce-48ff-090e-0e60b06f0def tf_backend.s3.bucket=terraformstatemybucket008888 tf_backend.s3.path=terraformstatefile http.url=https://terraformstatemybucket008888.s3.us-east-1.amazonaws.com/terraformstatefile?x-id=GetObject net.peer.name=terraformstatemybucket008888.s3.us-east-1.amazonaws.com http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************YSN6/20240604/us-east-1/s3/aws4_request, SignedHeaders=accept-encoding;amz-sdk-invocation-id;amz-sdk-request;host;range;x-amz-content-sha256;x-amz-date, Signature=*****" http.request.header.x_amz_date=20240604T082651Z http.request.header.range=bytes=0-5242879 http.request.header.amz_sdk_invocation_id=a0677d02-e0fc-4f80-a30f-9216e9fed791 http.request.body="" http.method=GET http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.7.5 (+https://www.terraform.io) aws-sdk-go-v2/1.25.3 os/linux lang/go#1.21.8 md/GOOS#linux md/GOARCH#386 api/s3#1.51.4 ft/s3-transfer" http.request.header.accept_encoding=identity http.request.header.amz_sdk_request="attempt=1; max=5" http.request.header.x_amz_content_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2024-06-04T15:26:51.801+0700 [DEBUG] backend-s3: HTTP Response Received: aws.region=us-east-1 aws.s3.bucket=terraformstatemybucket008888 aws.s3.key=terraformstatefile rpc.method=GetObject rpc.service=S3 rpc.system=aws-api tf_aws.sdk=aws-sdk-go-v2 tf_aws.signing_region="" tf_backend.operation=Get tf_backend.req_id=0dbbb6dd-08ce-48ff-090e-0e60b06f0def tf_backend.s3.bucket=terraformstatemybucket008888 tf_backend.s3.path=terraformstatefile http.response.header.accept_ranges=bytes http.response.header.x_amz_request_id=21GC4105BSMA71VS http.response.header.date="Tue, 04 Jun 2024 08:26:52 GMT" http.response.header.content_type=application/json http.response.body="[Redacted: 182 bytes, Type: application/json]" http.status_code=206 http.response_content_length=182 http.response.header.x_amz_server_side_encryption=AES256 http.response.header.content_encoding="" http.response.header.server=AmazonS3 http.response.header.last_modified="Tue, 04 Jun 2024 07:45:13 GMT" http.response.header.x_amz_id_2="hRpnkfFEUafQxJei4B0nz85YiDE6NbdqrfzQdvWoV+KSY1QUjL3HXIwj/J6hir98zt2jl/f1g3g=" http.response.header.etag="\"455e69b538dedf6d12872d9083ec788a\"" http.response.header.content_range="bytes 0-181/182" http.duration=372
+2024-06-04T15:26:51.802+0700 [DEBUG] created provider logger: level=debug
+2024-06-04T15:26:51.802+0700 [INFO]  provider: configuring client automatic mTLS
+2024-06-04T15:26:51.994+0700 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5 args=[".terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5"]
+2024-06-04T15:26:51.994+0700 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5 pid=39747
+2024-06-04T15:26:51.994+0700 [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5
+2024-06-04T15:26:52.163+0700 [INFO]  provider.terraform-provider-aws_v5.47.0_x5: configuring server automatic mTLS: timestamp="2024-06-04T15:26:52.156+0700"
+2024-06-04T15:26:52.394+0700 [DEBUG] provider: using plugin: version=5
+2024-06-04T15:26:52.394+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: plugin address: address=/tmp/plugin2878197481 network=unix timestamp="2024-06-04T15:26:52.394+0700"
+2024-06-04T15:26:53.941+0700 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2024-06-04T15:26:53.946+0700 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5 pid=39747
+2024-06-04T15:26:53.946+0700 [DEBUG] provider: plugin exited
+2024-06-04T15:26:53.947+0700 [DEBUG] Building and walking validate graph
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_instance.jenkins-master" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_lb_listener.jenkins-listener-https" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_subnet.subnet_1" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_internet_gateway.igw" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_acm_certificate.jenkins-lb-https" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "data.aws_ssm_parameter.linuxAmicali" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_vpc_peering_connection.useast1-uswest1" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_main_route_table_association.set-master-default-rt-assoc" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_acm_certificate_validation.cert" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_security_group.lb-sg" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_internet_gateway.igw-cali" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_lb_target_group.app-lb-tg" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_route53_record.cert_validation" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_security_group.jenkins-sg" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_route_table.internet_route" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_vpc.vpc_master" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "data.aws_availability_zones.azs" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_lb_target_group_attachment.jenkins-master-attach" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_lb.application-lb" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_subnet.subnet_2" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_security_group.jenkins-sg-cali" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_key_pair.master-key" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_main_route_table_association.set-worker-default-rt-assoc" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_vpc_peering_connection_accepter.accept_peering" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_key_pair.worker-key" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_route53_record.jenkins" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_vpc.vpc_master_cali" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_lb_listener.jenkins-listener-http" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "data.aws_ssm_parameter.linuxAmi" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_instance.jenkins-worker-cali" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_route_table.internet_route_cali" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "aws_subnet.subnet_1_cali" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:26:53.949+0700 [DEBUG] ProviderTransformer: "data.aws_route53_zone.dns" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:53.949+0700 [DEBUG] pruning unused provider["registry.terraform.io/hashicorp/aws"]
+2024-06-04T15:26:53.951+0700 [DEBUG] ReferenceTransformer: "aws_main_route_table_association.set-master-default-rt-assoc" references: [aws_route_table.internet_route aws_vpc.vpc_master]
+2024-06-04T15:26:53.951+0700 [DEBUG] ReferenceTransformer: "var.external_ip" references: []
+2024-06-04T15:26:53.951+0700 [DEBUG] ReferenceTransformer: "var.region-master" references: []
+2024-06-04T15:26:53.951+0700 [DEBUG] ReferenceTransformer: "output.url (expand)" references: [aws_route53_record.jenkins]
+2024-06-04T15:26:53.951+0700 [DEBUG] ReferenceTransformer: "aws_vpc.vpc_master" references: []
+2024-06-04T15:26:53.951+0700 [DEBUG] ReferenceTransformer: "aws_key_pair.worker-key" references: []
+2024-06-04T15:26:53.951+0700 [DEBUG] ReferenceTransformer: "aws_route_table.internet_route_cali" references: [aws_vpc.vpc_master_cali aws_internet_gateway.igw-cali aws_vpc_peering_connection.useast1-uswest1]
+2024-06-04T15:26:53.951+0700 [DEBUG] ReferenceTransformer: "aws_lb_target_group_attachment.jenkins-master-attach" references: [var.webserver-port aws_lb_target_group.app-lb-tg aws_instance.jenkins-master]
+2024-06-04T15:26:53.951+0700 [DEBUG] ReferenceTransformer: "data.aws_availability_zones.azs" references: []
+2024-06-04T15:26:53.951+0700 [DEBUG] ReferenceTransformer: "var.workers-count" references: []
+2024-06-04T15:26:53.951+0700 [DEBUG] ReferenceTransformer: "var.webserver-port" references: []
+2024-06-04T15:26:53.951+0700 [DEBUG] ReferenceTransformer: "aws_subnet.subnet_1_cali" references: [aws_vpc.vpc_master_cali]
+2024-06-04T15:26:53.951+0700 [DEBUG] ReferenceTransformer: "aws_lb.application-lb" references: [aws_subnet.subnet_1 aws_subnet.subnet_2 aws_security_group.lb-sg]
+2024-06-04T15:26:53.951+0700 [DEBUG] ReferenceTransformer: "data.aws_route53_zone.dns" references: [var.dns-name]
+2024-06-04T15:26:53.951+0700 [DEBUG] ReferenceTransformer: "data.aws_ssm_parameter.linuxAmicali" references: []
+2024-06-04T15:26:53.951+0700 [DEBUG] ReferenceTransformer: "aws_vpc.vpc_master_cali" references: []
+2024-06-04T15:26:53.951+0700 [DEBUG] ReferenceTransformer: "aws_route53_record.jenkins" references: [data.aws_route53_zone.dns data.aws_route53_zone.dns aws_lb.application-lb aws_lb.application-lb]
+2024-06-04T15:26:53.951+0700 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"].region-worker" references: [var.region-worker var.profile]
+2024-06-04T15:26:53.951+0700 [DEBUG] ReferenceTransformer: "aws_subnet.subnet_2" references: [data.aws_availability_zones.azs aws_vpc.vpc_master]
+2024-06-04T15:26:53.951+0700 [DEBUG] ReferenceTransformer: "aws_instance.jenkins-master" references: [aws_main_route_table_association.set-master-default-rt-assoc aws_subnet.subnet_1 aws_key_pair.master-key aws_security_group.jenkins-sg var.instance-type data.aws_ssm_parameter.linuxAmi var.profile var.region-master]
+2024-06-04T15:26:53.952+0700 [DEBUG] ReferenceTransformer: "aws_security_group.jenkins-sg-cali" references: [aws_vpc.vpc_master_cali var.external_ip]
+2024-06-04T15:26:53.952+0700 [DEBUG] ReferenceTransformer: "aws_lb_listener.jenkins-listener-https" references: [aws_acm_certificate.jenkins-lb-https aws_lb.application-lb aws_lb_target_group.app-lb-tg]
+2024-06-04T15:26:53.952+0700 [DEBUG] ReferenceTransformer: "aws_acm_certificate_validation.cert" references: [aws_route53_record.cert_validation aws_route53_record.cert_validation aws_acm_certificate.jenkins-lb-https]
+2024-06-04T15:26:53.952+0700 [DEBUG] ReferenceTransformer: "output.Jenkins-Worker-Public-IPs (expand)" references: [aws_instance.jenkins-worker-cali]
+2024-06-04T15:26:53.952+0700 [DEBUG] ReferenceTransformer: "aws_subnet.subnet_1" references: [aws_vpc.vpc_master data.aws_availability_zones.azs]
+2024-06-04T15:26:53.952+0700 [DEBUG] ReferenceTransformer: "aws_vpc_peering_connection.useast1-uswest1" references: [var.region-worker aws_vpc.vpc_master aws_vpc.vpc_master_cali]
+2024-06-04T15:26:53.952+0700 [DEBUG] ReferenceTransformer: "aws_key_pair.master-key" references: []
+2024-06-04T15:26:53.952+0700 [DEBUG] ReferenceTransformer: "aws_security_group.lb-sg" references: [aws_vpc.vpc_master]
+2024-06-04T15:26:53.952+0700 [DEBUG] ReferenceTransformer: "var.instance-type" references: []
+2024-06-04T15:26:53.952+0700 [DEBUG] ReferenceTransformer: "var.dns-name" references: []
+2024-06-04T15:26:53.952+0700 [DEBUG] ReferenceTransformer: "output.LB-DNS-NAME (expand)" references: [aws_lb.application-lb]
+2024-06-04T15:26:53.952+0700 [DEBUG] ReferenceTransformer: "output.Jenkins-Main-Node-Public-IP (expand)" references: [aws_instance.jenkins-master]
+2024-06-04T15:26:53.952+0700 [DEBUG] ReferenceTransformer: "aws_security_group.jenkins-sg" references: [aws_vpc.vpc_master var.external_ip var.webserver-port var.webserver-port aws_security_group.lb-sg]
+2024-06-04T15:26:53.952+0700 [DEBUG] ReferenceTransformer: "aws_lb_listener.jenkins-listener-http" references: [aws_lb.application-lb]
+2024-06-04T15:26:53.952+0700 [DEBUG] ReferenceTransformer: "aws_main_route_table_association.set-worker-default-rt-assoc" references: [aws_route_table.internet_route_cali aws_vpc.vpc_master_cali]
+2024-06-04T15:26:53.952+0700 [DEBUG] ReferenceTransformer: "data.aws_ssm_parameter.linuxAmi" references: []
+2024-06-04T15:26:53.952+0700 [DEBUG] ReferenceTransformer: "var.region-worker" references: []
+2024-06-04T15:26:53.952+0700 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"].region-master" references: [var.profile var.region-master]
+2024-06-04T15:26:53.952+0700 [DEBUG] ReferenceTransformer: "aws_vpc_peering_connection_accepter.accept_peering" references: [aws_vpc_peering_connection.useast1-uswest1]
+2024-06-04T15:26:53.952+0700 [DEBUG] ReferenceTransformer: "aws_instance.jenkins-worker-cali" references: [aws_main_route_table_association.set-worker-default-rt-assoc aws_instance.jenkins-master var.workers-count aws_instance.jenkins-master var.instance-type data.aws_ssm_parameter.linuxAmicali aws_subnet.subnet_1_cali aws_key_pair.worker-key aws_security_group.jenkins-sg-cali var.profile var.region-worker aws_instance.jenkins-master]
+2024-06-04T15:26:53.952+0700 [DEBUG] ReferenceTransformer: "aws_lb_target_group.app-lb-tg" references: [aws_vpc.vpc_master var.webserver-port var.webserver-port]
+2024-06-04T15:26:53.953+0700 [DEBUG] ReferenceTransformer: "aws_internet_gateway.igw" references: [aws_vpc.vpc_master]
+2024-06-04T15:26:53.953+0700 [DEBUG] ReferenceTransformer: "var.profile" references: []
+2024-06-04T15:26:53.953+0700 [DEBUG] ReferenceTransformer: "aws_route_table.internet_route" references: [aws_vpc.vpc_master aws_internet_gateway.igw aws_vpc_peering_connection.useast1-uswest1]
+2024-06-04T15:26:53.953+0700 [DEBUG] ReferenceTransformer: "aws_acm_certificate.jenkins-lb-https" references: [data.aws_route53_zone.dns]
+2024-06-04T15:26:53.953+0700 [DEBUG] ReferenceTransformer: "aws_internet_gateway.igw-cali" references: [aws_vpc.vpc_master_cali]
+2024-06-04T15:26:53.953+0700 [DEBUG] ReferenceTransformer: "aws_route53_record.cert_validation" references: [aws_acm_certificate.jenkins-lb-https data.aws_route53_zone.dns]
+2024-06-04T15:26:53.957+0700 [DEBUG] Starting graph walk: walkValidate
+2024-06-04T15:26:53.958+0700 [DEBUG] created provider logger: level=debug
+2024-06-04T15:26:53.958+0700 [INFO]  provider: configuring client automatic mTLS
+2024-06-04T15:26:54.028+0700 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5 args=[".terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5"]
+2024-06-04T15:26:54.029+0700 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5 pid=39754
+2024-06-04T15:26:54.029+0700 [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5
+2024-06-04T15:26:54.207+0700 [INFO]  provider.terraform-provider-aws_v5.47.0_x5: configuring server automatic mTLS: timestamp="2024-06-04T15:26:54.192+0700"
+2024-06-04T15:26:54.347+0700 [DEBUG] provider: using plugin: version=5
+2024-06-04T15:26:54.347+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: plugin address: address=/tmp/plugin2530888947 network=unix timestamp="2024-06-04T15:26:54.347+0700"
+2024-06-04T15:26:54.437+0700 [DEBUG] created provider logger: level=debug
+2024-06-04T15:26:54.437+0700 [INFO]  provider: configuring client automatic mTLS
+2024-06-04T15:26:54.503+0700 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5 args=[".terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5"]
+2024-06-04T15:26:54.513+0700 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5 pid=39761
+2024-06-04T15:26:54.513+0700 [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5
+2024-06-04T15:26:54.716+0700 [INFO]  provider.terraform-provider-aws_v5.47.0_x5: configuring server automatic mTLS: timestamp="2024-06-04T15:26:54.708+0700"
+2024-06-04T15:26:54.874+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: plugin address: address=/tmp/plugin2254477041 network=unix timestamp="2024-06-04T15:26:54.874+0700"
+2024-06-04T15:26:54.874+0700 [DEBUG] provider: using plugin: version=5
+2024-06-04T15:26:55.136+0700 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2024-06-04T15:26:55.137+0700 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5 pid=39754
+2024-06-04T15:26:55.137+0700 [DEBUG] provider: plugin exited
+2024-06-04T15:26:55.138+0700 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2024-06-04T15:26:55.144+0700 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5 pid=39761
+2024-06-04T15:26:55.144+0700 [DEBUG] provider: plugin exited
+2024-06-04T15:26:55.144+0700 [INFO]  backend/local: plan calling Plan
+2024-06-04T15:26:55.144+0700 [DEBUG] Building and walking plan graph for NormalMode
+2024-06-04T15:26:55.147+0700 [DEBUG] ProviderTransformer: "aws_route_table.internet_route_cali (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:26:55.147+0700 [DEBUG] ProviderTransformer: "data.aws_ssm_parameter.linuxAmicali (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:26:55.147+0700 [DEBUG] ProviderTransformer: "aws_vpc.vpc_master_cali (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:26:55.147+0700 [DEBUG] ProviderTransformer: "aws_main_route_table_association.set-worker-default-rt-assoc (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:26:55.147+0700 [DEBUG] ProviderTransformer: "aws_internet_gateway.igw (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.147+0700 [DEBUG] ProviderTransformer: "aws_internet_gateway.igw-cali (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:26:55.148+0700 [DEBUG] ProviderTransformer: "aws_security_group.lb-sg (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.148+0700 [DEBUG] ProviderTransformer: "aws_lb_listener.jenkins-listener-http (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.148+0700 [DEBUG] ProviderTransformer: "aws_instance.jenkins-master (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.148+0700 [DEBUG] ProviderTransformer: "aws_vpc.vpc_master (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.148+0700 [DEBUG] ProviderTransformer: "aws_subnet.subnet_1 (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.148+0700 [DEBUG] ProviderTransformer: "aws_lb_target_group_attachment.jenkins-master-attach (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.148+0700 [DEBUG] ProviderTransformer: "aws_lb_target_group.app-lb-tg (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.148+0700 [DEBUG] ProviderTransformer: "aws_acm_certificate.jenkins-lb-https (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.148+0700 [DEBUG] ProviderTransformer: "aws_route_table.internet_route (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.148+0700 [DEBUG] ProviderTransformer: "aws_main_route_table_association.set-master-default-rt-assoc (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.148+0700 [DEBUG] ProviderTransformer: "aws_vpc_peering_connection.useast1-uswest1 (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.148+0700 [DEBUG] ProviderTransformer: "aws_key_pair.worker-key (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:26:55.148+0700 [DEBUG] ProviderTransformer: "aws_route53_record.cert_validation (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.148+0700 [DEBUG] ProviderTransformer: "aws_security_group.jenkins-sg-cali (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:26:55.148+0700 [DEBUG] ProviderTransformer: "aws_subnet.subnet_1_cali (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:26:55.148+0700 [DEBUG] ProviderTransformer: "aws_lb.application-lb (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.148+0700 [DEBUG] ProviderTransformer: "aws_vpc_peering_connection_accepter.accept_peering (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:26:55.148+0700 [DEBUG] ProviderTransformer: "aws_key_pair.master-key (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.148+0700 [DEBUG] ProviderTransformer: "aws_subnet.subnet_2 (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.149+0700 [DEBUG] ProviderTransformer: "data.aws_route53_zone.dns (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.149+0700 [DEBUG] ProviderTransformer: "data.aws_ssm_parameter.linuxAmi (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.149+0700 [DEBUG] ProviderTransformer: "aws_security_group.jenkins-sg (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.149+0700 [DEBUG] ProviderTransformer: "aws_lb_listener.jenkins-listener-https (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.149+0700 [DEBUG] ProviderTransformer: "aws_instance.jenkins-worker-cali (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:26:55.149+0700 [DEBUG] ProviderTransformer: "aws_acm_certificate_validation.cert (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.149+0700 [DEBUG] ProviderTransformer: "aws_route53_record.jenkins (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.149+0700 [DEBUG] ProviderTransformer: "data.aws_availability_zones.azs (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:26:55.150+0700 [DEBUG] pruning unused provider["registry.terraform.io/hashicorp/aws"]
+2024-06-04T15:26:55.152+0700 [DEBUG] ReferenceTransformer: "output.LB-DNS-NAME (expand)" references: [aws_lb.application-lb (expand)]
+2024-06-04T15:26:55.152+0700 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"].region-worker" references: [var.region-worker var.profile]
+2024-06-04T15:26:55.152+0700 [DEBUG] ReferenceTransformer: "aws_key_pair.worker-key (expand)" references: []
+2024-06-04T15:26:55.152+0700 [DEBUG] ReferenceTransformer: "data.aws_route53_zone.dns (expand)" references: [var.dns-name]
+2024-06-04T15:26:55.152+0700 [DEBUG] ReferenceTransformer: "data.aws_ssm_parameter.linuxAmicali (expand)" references: []
+2024-06-04T15:26:55.152+0700 [DEBUG] ReferenceTransformer: "aws_main_route_table_association.set-worker-default-rt-assoc (expand)" references: [aws_route_table.internet_route_cali (expand) aws_vpc.vpc_master_cali (expand)]
+2024-06-04T15:26:55.152+0700 [DEBUG] ReferenceTransformer: "data.aws_ssm_parameter.linuxAmi (expand)" references: []
+2024-06-04T15:26:55.152+0700 [DEBUG] ReferenceTransformer: "var.external_ip" references: []
+2024-06-04T15:26:55.152+0700 [DEBUG] ReferenceTransformer: "var.dns-name" references: []
+2024-06-04T15:26:55.152+0700 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"].region-master" references: [var.region-master var.profile]
+2024-06-04T15:26:55.152+0700 [DEBUG] ReferenceTransformer: "aws_instance.jenkins-master (expand)" references: [aws_main_route_table_association.set-master-default-rt-assoc (expand) var.instance-type data.aws_ssm_parameter.linuxAmi (expand) aws_subnet.subnet_1 (expand) aws_key_pair.master-key (expand) aws_security_group.jenkins-sg (expand) var.profile var.region-master]
+2024-06-04T15:26:55.153+0700 [DEBUG] ReferenceTransformer: "aws_vpc.vpc_master_cali (expand)" references: []
+2024-06-04T15:26:55.153+0700 [DEBUG] ReferenceTransformer: "aws_route53_record.cert_validation (expand)" references: [aws_acm_certificate.jenkins-lb-https (expand) data.aws_route53_zone.dns (expand)]
+2024-06-04T15:26:55.153+0700 [DEBUG] ReferenceTransformer: "aws_lb.application-lb (expand)" references: [aws_subnet.subnet_1 (expand) aws_subnet.subnet_2 (expand) aws_security_group.lb-sg (expand)]
+2024-06-04T15:26:55.153+0700 [DEBUG] ReferenceTransformer: "aws_internet_gateway.igw (expand)" references: [aws_vpc.vpc_master (expand)]
+2024-06-04T15:26:55.153+0700 [DEBUG] ReferenceTransformer: "output.Jenkins-Worker-Public-IPs (expand)" references: [aws_instance.jenkins-worker-cali (expand)]
+2024-06-04T15:26:55.153+0700 [DEBUG] ReferenceTransformer: "aws_route53_record.jenkins (expand)" references: [data.aws_route53_zone.dns (expand) data.aws_route53_zone.dns (expand) aws_lb.application-lb (expand) aws_lb.application-lb (expand)]
+2024-06-04T15:26:55.153+0700 [DEBUG] ReferenceTransformer: "aws_vpc_peering_connection_accepter.accept_peering (expand)" references: [aws_vpc_peering_connection.useast1-uswest1 (expand)]
+2024-06-04T15:26:55.153+0700 [DEBUG] ReferenceTransformer: "var.profile" references: []
+2024-06-04T15:26:55.153+0700 [DEBUG] ReferenceTransformer: "aws_internet_gateway.igw-cali (expand)" references: [aws_vpc.vpc_master_cali (expand)]
+2024-06-04T15:26:55.153+0700 [DEBUG] ReferenceTransformer: "aws_lb_listener.jenkins-listener-https (expand)" references: [aws_lb.application-lb (expand) aws_acm_certificate.jenkins-lb-https (expand) aws_lb_target_group.app-lb-tg (expand)]
+2024-06-04T15:26:55.153+0700 [DEBUG] ReferenceTransformer: "aws_vpc.vpc_master (expand)" references: []
+2024-06-04T15:26:55.153+0700 [DEBUG] ReferenceTransformer: "var.region-master" references: []
+2024-06-04T15:26:55.153+0700 [DEBUG] ReferenceTransformer: "var.region-worker" references: []
+2024-06-04T15:26:55.153+0700 [DEBUG] ReferenceTransformer: "aws_subnet.subnet_1 (expand)" references: [data.aws_availability_zones.azs (expand) aws_vpc.vpc_master (expand)]
+2024-06-04T15:26:55.154+0700 [DEBUG] ReferenceTransformer: "aws_security_group.jenkins-sg (expand)" references: [aws_vpc.vpc_master (expand) var.external_ip var.webserver-port var.webserver-port aws_security_group.lb-sg (expand)]
+2024-06-04T15:26:55.154+0700 [DEBUG] ReferenceTransformer: "aws_key_pair.master-key (expand)" references: []
+2024-06-04T15:26:55.154+0700 [DEBUG] ReferenceTransformer: "aws_instance.jenkins-worker-cali (expand)" references: [aws_main_route_table_association.set-worker-default-rt-assoc (expand) aws_instance.jenkins-master (expand) var.workers-count data.aws_ssm_parameter.linuxAmicali (expand) aws_subnet.subnet_1_cali (expand) aws_key_pair.worker-key (expand) aws_security_group.jenkins-sg-cali (expand) aws_instance.jenkins-master (expand) var.instance-type var.profile var.region-worker aws_instance.jenkins-master (expand)]
+2024-06-04T15:26:55.154+0700 [DEBUG] ReferenceTransformer: "aws_security_group.jenkins-sg-cali (expand)" references: [aws_vpc.vpc_master_cali (expand) var.external_ip]
+2024-06-04T15:26:55.154+0700 [DEBUG] ReferenceTransformer: "aws_main_route_table_association.set-master-default-rt-assoc (expand)" references: [aws_route_table.internet_route (expand) aws_vpc.vpc_master (expand)]
+2024-06-04T15:26:55.154+0700 [DEBUG] ReferenceTransformer: "aws_lb_target_group.app-lb-tg (expand)" references: [aws_vpc.vpc_master (expand) var.webserver-port var.webserver-port]
+2024-06-04T15:26:55.154+0700 [DEBUG] ReferenceTransformer: "output.url (expand)" references: [aws_route53_record.jenkins (expand)]
+2024-06-04T15:26:55.154+0700 [DEBUG] ReferenceTransformer: "aws_subnet.subnet_1_cali (expand)" references: [aws_vpc.vpc_master_cali (expand)]
+2024-06-04T15:26:55.154+0700 [DEBUG] ReferenceTransformer: "aws_route_table.internet_route (expand)" references: [aws_vpc.vpc_master (expand) aws_internet_gateway.igw (expand) aws_vpc_peering_connection.useast1-uswest1 (expand)]
+2024-06-04T15:26:55.154+0700 [DEBUG] ReferenceTransformer: "aws_lb_target_group_attachment.jenkins-master-attach (expand)" references: [var.webserver-port aws_lb_target_group.app-lb-tg (expand) aws_instance.jenkins-master (expand)]
+2024-06-04T15:26:55.154+0700 [DEBUG] ReferenceTransformer: "aws_security_group.lb-sg (expand)" references: [aws_vpc.vpc_master (expand)]
+2024-06-04T15:26:55.154+0700 [DEBUG] ReferenceTransformer: "data.aws_availability_zones.azs (expand)" references: []
+2024-06-04T15:26:55.154+0700 [DEBUG] ReferenceTransformer: "var.instance-type" references: []
+2024-06-04T15:26:55.154+0700 [DEBUG] ReferenceTransformer: "aws_route_table.internet_route_cali (expand)" references: [aws_vpc.vpc_master_cali (expand) aws_internet_gateway.igw-cali (expand) aws_vpc_peering_connection.useast1-uswest1 (expand)]
+2024-06-04T15:26:55.154+0700 [DEBUG] ReferenceTransformer: "aws_acm_certificate.jenkins-lb-https (expand)" references: [data.aws_route53_zone.dns (expand)]
+2024-06-04T15:26:55.155+0700 [DEBUG] ReferenceTransformer: "aws_lb_listener.jenkins-listener-http (expand)" references: [aws_lb.application-lb (expand)]
+2024-06-04T15:26:55.155+0700 [DEBUG] ReferenceTransformer: "var.workers-count" references: []
+2024-06-04T15:26:55.155+0700 [DEBUG] ReferenceTransformer: "var.webserver-port" references: []
+2024-06-04T15:26:55.155+0700 [DEBUG] ReferenceTransformer: "output.Jenkins-Main-Node-Public-IP (expand)" references: [aws_instance.jenkins-master (expand)]
+2024-06-04T15:26:55.155+0700 [DEBUG] ReferenceTransformer: "aws_vpc_peering_connection.useast1-uswest1 (expand)" references: [var.region-worker aws_vpc.vpc_master (expand) aws_vpc.vpc_master_cali (expand)]
+2024-06-04T15:26:55.155+0700 [DEBUG] ReferenceTransformer: "aws_acm_certificate_validation.cert (expand)" references: [aws_route53_record.cert_validation (expand) aws_route53_record.cert_validation (expand) aws_acm_certificate.jenkins-lb-https (expand)]
+2024-06-04T15:26:55.155+0700 [DEBUG] ReferenceTransformer: "aws_subnet.subnet_2 (expand)" references: [aws_vpc.vpc_master (expand) data.aws_availability_zones.azs (expand)]
+2024-06-04T15:26:55.160+0700 [DEBUG] Starting graph walk: walkPlan
+2024-06-04T15:26:55.161+0700 [DEBUG] created provider logger: level=debug
+2024-06-04T15:26:55.161+0700 [INFO]  provider: configuring client automatic mTLS
+2024-06-04T15:26:55.236+0700 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5 args=[".terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5"]
+2024-06-04T15:26:55.237+0700 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5 pid=39768
+2024-06-04T15:26:55.237+0700 [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5
+2024-06-04T15:26:55.374+0700 [INFO]  provider.terraform-provider-aws_v5.47.0_x5: configuring server automatic mTLS: timestamp="2024-06-04T15:26:55.374+0700"
+2024-06-04T15:26:55.521+0700 [DEBUG] provider: using plugin: version=5
+2024-06-04T15:26:55.521+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: plugin address: address=/tmp/plugin276961716 network=unix timestamp="2024-06-04T15:26:55.521+0700"
+2024-06-04T15:26:55.613+0700 [DEBUG] created provider logger: level=debug
+2024-06-04T15:26:55.613+0700 [INFO]  provider: configuring client automatic mTLS
+2024-06-04T15:26:55.677+0700 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5 args=[".terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5"]
+2024-06-04T15:26:55.687+0700 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5 pid=39775
+2024-06-04T15:26:55.688+0700 [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5
+2024-06-04T15:26:55.927+0700 [INFO]  provider.terraform-provider-aws_v5.47.0_x5: configuring server automatic mTLS: timestamp="2024-06-04T15:26:55.924+0700"
+2024-06-04T15:26:56.071+0700 [DEBUG] provider: using plugin: version=5
+2024-06-04T15:26:56.071+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: plugin address: address=/tmp/plugin1129598425 network=unix timestamp="2024-06-04T15:26:56.071+0700"
+2024-06-04T15:26:56.163+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: Configuring Terraform AWS Provider: @module=aws tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/terraform-provider-aws/internal/conns/config.go:143 tf_mux_provider="*schema.GRPCProviderServer" tf_req_id=9509dbfa-3daa-f363-6978-b65914d38ff2 tf_rpc=ConfigureProvider timestamp="2024-06-04T15:26:56.161+0700"
+2024-06-04T15:26:56.164+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: Resolving credentials provider: tf_req_id=9509dbfa-3daa-f363-6978-b65914d38ff2 @module=aws.aws-base tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.52/logging/tf_logger.go:47 tf_mux_provider="*schema.GRPCProviderServer" tf_rpc=ConfigureProvider timestamp="2024-06-04T15:26:56.161+0700"
+2024-06-04T15:26:56.164+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: Setting profile: @module=aws.aws-base tf_mux_provider="*schema.GRPCProviderServer" tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.52/logging/tf_logger.go:47 tf_aws.profile.source=provider tf_req_id=9509dbfa-3daa-f363-6978-b65914d38ff2 tf_rpc=ConfigureProvider tf_aws.profile=default timestamp="2024-06-04T15:26:56.161+0700"
+2024-06-04T15:26:56.164+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: Loading configuration: @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.52/logging/tf_logger.go:47 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=9509dbfa-3daa-f363-6978-b65914d38ff2 tf_rpc=ConfigureProvider @module=aws.aws-base tf_mux_provider="*schema.GRPCProviderServer" timestamp="2024-06-04T15:26:56.161+0700"
+2024-06-04T15:26:56.164+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: Retrieving credentials: @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.52/logging/tf_logger.go:47 tf_mux_provider="*schema.GRPCProviderServer" tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=9509dbfa-3daa-f363-6978-b65914d38ff2 @module=aws.aws-base tf_rpc=ConfigureProvider timestamp="2024-06-04T15:26:56.161+0700"
+2024-06-04T15:26:56.164+0700 [INFO]  provider.terraform-provider-aws_v5.47.0_x5: Retrieved credentials: @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.52/logging/tf_logger.go:39 @module=aws.aws-base tf_aws.credentials_source="SharedConfigCredentials: /root/.aws/credentials" tf_mux_provider="*schema.GRPCProviderServer" tf_req_id=9509dbfa-3daa-f363-6978-b65914d38ff2 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=ConfigureProvider timestamp="2024-06-04T15:26:56.161+0700"
+2024-06-04T15:26:56.164+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: Loading configuration: @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.52/logging/tf_logger.go:47 tf_mux_provider="*schema.GRPCProviderServer" tf_req_id=9509dbfa-3daa-f363-6978-b65914d38ff2 @module=aws.aws-base tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=ConfigureProvider timestamp="2024-06-04T15:26:56.162+0700"
+2024-06-04T15:26:56.164+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: Creating AWS SDK v1 session: @caller=github.com/hashicorp/terraform-provider-aws/internal/conns/config.go:167 tf_req_id=9509dbfa-3daa-f363-6978-b65914d38ff2 tf_rpc=ConfigureProvider @module=aws tf_mux_provider="*schema.GRPCProviderServer" tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp="2024-06-04T15:26:56.162+0700"
+2024-06-04T15:26:56.164+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: Retrieving AWS account details: @module=aws tf_mux_provider="*schema.GRPCProviderServer" tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=ConfigureProvider @caller=github.com/hashicorp/terraform-provider-aws/internal/conns/config.go:182 tf_req_id=9509dbfa-3daa-f363-6978-b65914d38ff2 timestamp="2024-06-04T15:26:56.162+0700"
+2024-06-04T15:26:56.164+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: Retrieving caller identity from STS: @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.52/logging/tf_logger.go:47 @module=aws.aws-base tf_req_id=9509dbfa-3daa-f363-6978-b65914d38ff2 tf_mux_provider="*schema.GRPCProviderServer" tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=ConfigureProvider timestamp="2024-06-04T15:26:56.162+0700"
+2024-06-04T15:26:56.164+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: HTTP Request Sent: http.request.header.x_amz_date=20240604T082656Z tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=ConfigureProvider http.method=POST http.request.header.content_type=application/x-www-form-urlencoded http.url=https://sts.us-east-1.amazonaws.com/ rpc.service=STS rpc.system=aws-api tf_aws.signing_region="" aws.region=us-east-1 http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************YSN6/20240604/us-east-1/sts/aws4_request, SignedHeaders=amz-sdk-invocation-id;amz-sdk-request;content-length;content-type;host;x-amz-date, Signature=*****" rpc.method=GetCallerIdentity http.request.header.amz_sdk_request="attempt=1; max=25" http.request_content_length=43 tf_mux_provider="*schema.GRPCProviderServer" @module=aws.aws-base http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.7.5 (+https://www.terraform.io) terraform-provider-aws/5.47.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.26.1 os/linux lang/go#1.22.0 md/GOOS#linux md/GOARCH#386 api/sts#1.28.6" @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.52/logging/tf_logger.go:47
+  http.request.body=
+  | Action=GetCallerIdentity&Version=2011-06-15
+   http.request.header.amz_sdk_invocation_id=f794a1d0-1ae3-4ac2-9625-85a27f429f5b tf_aws.sdk=aws-sdk-go-v2 tf_req_id=9509dbfa-3daa-f363-6978-b65914d38ff2 net.peer.name=sts.us-east-1.amazonaws.com timestamp="2024-06-04T15:26:56.163+0700"
+2024-06-04T15:26:56.333+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: Configuring Terraform AWS Provider: tf_mux_provider="*schema.GRPCProviderServer" tf_rpc=ConfigureProvider @caller=github.com/hashicorp/terraform-provider-aws/internal/conns/config.go:143 @module=aws tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=0d949e15-a0d5-4eac-2be1-05e4e86d74b9 timestamp="2024-06-04T15:26:56.333+0700"
+2024-06-04T15:26:56.334+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: Resolving credentials provider: tf_mux_provider="*schema.GRPCProviderServer" tf_req_id=0d949e15-a0d5-4eac-2be1-05e4e86d74b9 @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.52/logging/tf_logger.go:47 @module=aws.aws-base tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=ConfigureProvider timestamp="2024-06-04T15:26:56.333+0700"
+2024-06-04T15:26:56.334+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: Setting profile: tf_mux_provider="*schema.GRPCProviderServer" @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.52/logging/tf_logger.go:47 @module=aws.aws-base tf_aws.profile.source=provider tf_req_id=0d949e15-a0d5-4eac-2be1-05e4e86d74b9 tf_rpc=ConfigureProvider tf_aws.profile=default tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp="2024-06-04T15:26:56.334+0700"
+2024-06-04T15:26:56.334+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: Loading configuration: @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.52/logging/tf_logger.go:47 @module=aws.aws-base tf_req_id=0d949e15-a0d5-4eac-2be1-05e4e86d74b9 tf_rpc=ConfigureProvider tf_mux_provider="*schema.GRPCProviderServer" tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp="2024-06-04T15:26:56.334+0700"
+2024-06-04T15:26:56.334+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: Retrieving credentials: @module=aws.aws-base tf_req_id=0d949e15-a0d5-4eac-2be1-05e4e86d74b9 tf_rpc=ConfigureProvider @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.52/logging/tf_logger.go:47 tf_mux_provider="*schema.GRPCProviderServer" tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp="2024-06-04T15:26:56.334+0700"
+2024-06-04T15:26:56.334+0700 [INFO]  provider.terraform-provider-aws_v5.47.0_x5: Retrieved credentials: tf_aws.credentials_source="SharedConfigCredentials: /root/.aws/credentials" tf_mux_provider="*schema.GRPCProviderServer" tf_req_id=0d949e15-a0d5-4eac-2be1-05e4e86d74b9 tf_rpc=ConfigureProvider @module=aws.aws-base @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.52/logging/tf_logger.go:39 tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp="2024-06-04T15:26:56.334+0700"
+2024-06-04T15:26:56.334+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: Loading configuration: tf_mux_provider="*schema.GRPCProviderServer" @module=aws.aws-base tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=0d949e15-a0d5-4eac-2be1-05e4e86d74b9 tf_rpc=ConfigureProvider @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.52/logging/tf_logger.go:47 timestamp="2024-06-04T15:26:56.334+0700"
+2024-06-04T15:26:56.334+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: Creating AWS SDK v1 session: @caller=github.com/hashicorp/terraform-provider-aws/internal/conns/config.go:167 @module=aws tf_mux_provider="*schema.GRPCProviderServer" tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=0d949e15-a0d5-4eac-2be1-05e4e86d74b9 tf_rpc=ConfigureProvider timestamp="2024-06-04T15:26:56.334+0700"
+2024-06-04T15:26:56.335+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: Retrieving AWS account details: @module=aws tf_req_id=0d949e15-a0d5-4eac-2be1-05e4e86d74b9 tf_rpc=ConfigureProvider @caller=github.com/hashicorp/terraform-provider-aws/internal/conns/config.go:182 tf_mux_provider="*schema.GRPCProviderServer" tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp="2024-06-04T15:26:56.335+0700"
+2024-06-04T15:26:56.335+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: Retrieving caller identity from STS: @module=aws.aws-base tf_req_id=0d949e15-a0d5-4eac-2be1-05e4e86d74b9 tf_rpc=ConfigureProvider @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.52/logging/tf_logger.go:47 tf_mux_provider="*schema.GRPCProviderServer" tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp="2024-06-04T15:26:56.335+0700"
+2024-06-04T15:26:56.336+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: HTTP Request Sent: http.request.header.amz_sdk_invocation_id=e7407481-9b47-43dd-8aef-6a7b63405ab6 http.url=https://sts.us-west-1.amazonaws.com/ http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.7.5 (+https://www.terraform.io) terraform-provider-aws/5.47.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.26.1 os/linux lang/go#1.22.0 md/GOOS#linux md/GOARCH#386 api/sts#1.28.6" rpc.method=GetCallerIdentity tf_mux_provider="*schema.GRPCProviderServer" http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************YSN6/20240604/us-west-1/sts/aws4_request, SignedHeaders=amz-sdk-invocation-id;amz-sdk-request;content-length;content-type;host;x-amz-date, Signature=*****" http.request.header.x_amz_date=20240604T082656Z tf_rpc=ConfigureProvider @module=aws.aws-base
+  http.request.body=
+  | Action=GetCallerIdentity&Version=2011-06-15
+   http.request.header.amz_sdk_request="attempt=1; max=25" http.request.header.content_type=application/x-www-form-urlencoded http.request_content_length=43 tf_aws.sdk=aws-sdk-go-v2 net.peer.name=sts.us-west-1.amazonaws.com rpc.service=STS tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.52/logging/tf_logger.go:47 http.method=POST tf_req_id=0d949e15-a0d5-4eac-2be1-05e4e86d74b9 aws.region=us-west-1 rpc.system=aws-api tf_aws.signing_region="" timestamp="2024-06-04T15:26:56.335+0700"
+2024-06-04T15:26:58.119+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: HTTP Response Received: rpc.system=aws-api tf_aws.signing_region="" tf_mux_provider="*schema.GRPCProviderServer" @module=aws.aws-base
+  http.response.body=
+  | <GetCallerIdentityResponse xmlns="https://sts.amazonaws.com/doc/2011-06-15/">
+  |   <GetCallerIdentityResult>
+  |     <Arn>arn:aws:iam::959764676190:user/terraform-User</Arn>
+  |     <UserId>AIDA*************RSTX</UserId>
+  |     <Account>959764676190</Account>
+  |   </GetCallerIdentityResult>
+  |   <ResponseMetadata>
+  |     <RequestId>4a6c36af-2073-48fb-bd61-fbf069688361</RequestId>
+  |   </ResponseMetadata>
+  | </GetCallerIdentityResponse>
+   http.response.header.date="Tue, 04 Jun 2024 08:26:57 GMT" rpc.service=STS tf_req_id=0d949e15-a0d5-4eac-2be1-05e4e86d74b9 aws.region=us-west-1 http.response.header.x_amzn_requestid=4a6c36af-2073-48fb-bd61-fbf069688361 http.status_code=200 tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.52/logging/tf_logger.go:47 http.response_content_length=411 tf_rpc=ConfigureProvider http.duration=1783 http.response.header.content_type=text/xml rpc.method=GetCallerIdentity tf_aws.sdk=aws-sdk-go-v2 timestamp="2024-06-04T15:26:58.119+0700"
+2024-06-04T15:26:58.119+0700 [INFO]  provider.terraform-provider-aws_v5.47.0_x5: Retrieved caller identity from STS: @module=aws.aws-base @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.52/logging/tf_logger.go:39 tf_mux_provider="*schema.GRPCProviderServer" tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=0d949e15-a0d5-4eac-2be1-05e4e86d74b9 tf_rpc=ConfigureProvider timestamp="2024-06-04T15:26:58.119+0700"
+2024-06-04T15:26:58.121+0700 [DEBUG] Resource instance state not found for node "data.aws_ssm_parameter.linuxAmicali", instance data.aws_ssm_parameter.linuxAmicali
+2024-06-04T15:26:58.121+0700 [DEBUG] ReferenceTransformer: "data.aws_ssm_parameter.linuxAmicali" references: []
+2024-06-04T15:26:58.121+0700 [DEBUG] Resource instance state not found for node "aws_vpc.vpc_master_cali", instance aws_vpc.vpc_master_cali
+2024-06-04T15:26:58.121+0700 [DEBUG] ReferenceTransformer: "aws_vpc.vpc_master_cali" references: []
+2024-06-04T15:26:58.121+0700 [DEBUG] Resource instance state not found for node "aws_key_pair.worker-key", instance aws_key_pair.worker-key
+2024-06-04T15:26:58.121+0700 [DEBUG] ReferenceTransformer: "aws_key_pair.worker-key" references: []
+2024-06-04T15:26:58.122+0700 [DEBUG] refresh: aws_vpc.vpc_master_cali: no state, so not refreshing
+2024-06-04T15:26:58.122+0700 [DEBUG] refresh: aws_key_pair.worker-key: no state, so not refreshing
+2024-06-04T15:26:58.137+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: [DEBUG] Reading SSM Parameter: {
+2024-06-04T15:26:58.137+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5:   Name: "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2",
+2024-06-04T15:26:58.137+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5:   WithDecryption: true
+2024-06-04T15:26:58.138+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: }
+2024-06-04T15:26:58.140+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_key_pair.worker-key, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .public_key: planned value cty.StringVal("ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDryA5D44+JoOI/8m1rKrYjDXTswaWkEFGru+AYvH9ga4CZS/hF+lZLRZ2W3X3h98HXiMvAQoyHpQwsRPJMGvF6ax2dtfx7l7Y86y/Cs+LP54YeQutkkHYXLvG2pUS7AEo/xMWnvNG+KF21KhjkvUDldHKwDvt7u4q22QKXr3SHuJdV2KvaVLvBC2KJa96Pv6+WL3crVaNa9HNZ/TV4bdw0znk28R0s4pNnI5LveKiFKvWTVPX1eIBB8eDBkeIVxYXnDXR9Kr9ewdWvC18RUnL30M3o+sPkn+oYfvJsCqBpl0PRlnt8SxB7/QZ58c5ZnNGYchfIaYka2cEcLfWKcE7ZYlsb3Uzm2Z8uJEq1pKGvl8FhecGVKpSWY1PINcRbyld4YtE3T7WDbxISHqtRWdn6xZR/UA0RHMMI5CGpQnVtwilM2lfIgfe3FDD+KYrgLmiKYaJLssrixZE9b+ic6zm0rGh+bYw0CJXtHxA82WFRWFMkSICsJuQ2UWrP4qISwc0= root@terraformSVR") does not match config value cty.StringVal("ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDryA5D44+JoOI/8m1rKrYjDXTswaWkEFGru+AYvH9ga4CZS/hF+lZLRZ2W3X3h98HXiMvAQoyHpQwsRPJMGvF6ax2dtfx7l7Y86y/Cs+LP54YeQutkkHYXLvG2pUS7AEo/xMWnvNG+KF21KhjkvUDldHKwDvt7u4q22QKXr3SHuJdV2KvaVLvBC2KJa96Pv6+WL3crVaNa9HNZ/TV4bdw0znk28R0s4pNnI5LveKiFKvWTVPX1eIBB8eDBkeIVxYXnDXR9Kr9ewdWvC18RUnL30M3o+sPkn+oYfvJsCqBpl0PRlnt8SxB7/QZ58c5ZnNGYchfIaYka2cEcLfWKcE7ZYlsb3Uzm2Z8uJEq1pKGvl8FhecGVKpSWY1PINcRbyld4YtE3T7WDbxISHqtRWdn6xZR/UA0RHMMI5CGpQnVtwilM2lfIgfe3FDD+KYrgLmiKYaJLssrixZE9b+ic6zm0rGh+bYw0CJXtHxA82WFRWFMkSICsJuQ2UWrP4qISwc0= root@terraformSVR\n")
+2024-06-04T15:26:58.140+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: HTTP Request Sent: rpc.service=SSM http.flavor=1.1 http.request.header.content_type=application/x-amz-json-1.1 http.request.header.x_amz_date=20240604T082658Z tf_req_id=cc9d61bb-fdce-96e9-46d0-885627cb66c8 tf_provider_addr=registry.terraform.io/hashicorp/aws http.method=POST
+  http.request.body=
+  | {"Name":"/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2","WithDecryption":true}
+   http.request.header.x_amz_target=AmazonSSM.GetParameter rpc.system=aws-api @module=aws aws.region=us-west-1 net.peer.name=ssm.us-west-1.amazonaws.com tf_aws.sdk=aws-sdk-go http.url=https://ssm.us-west-1.amazonaws.com/ http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.7.5 (+https://www.terraform.io) terraform-provider-aws/5.47.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.51.28 (go1.22.0; linux; 386)" tf_data_source_type=aws_ssm_parameter @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.53/logger.go:109 tf_rpc=ReadDataSource http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************YSN6/20240604/us-west-1/ssm/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date;x-amz-target, Signature=*****" http.request_content_length=94 rpc.method=GetParameter tf_mux_provider="*schema.GRPCProviderServer" timestamp="2024-06-04T15:26:58.138+0700"
+2024-06-04T15:26:58.142+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_vpc.vpc_master_cali, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .instance_tenancy: planned value cty.StringVal("default") for a non-computed attribute
+2024-06-04T15:26:58.142+0700 [DEBUG] Resource instance state not found for node "aws_internet_gateway.igw-cali", instance aws_internet_gateway.igw-cali
+2024-06-04T15:26:58.142+0700 [DEBUG] ReferenceTransformer: "aws_internet_gateway.igw-cali" references: []
+2024-06-04T15:26:58.142+0700 [DEBUG] Resource instance state not found for node "aws_security_group.jenkins-sg-cali", instance aws_security_group.jenkins-sg-cali
+2024-06-04T15:26:58.142+0700 [DEBUG] ReferenceTransformer: "aws_security_group.jenkins-sg-cali" references: []
+2024-06-04T15:26:58.143+0700 [DEBUG] Resource instance state not found for node "aws_subnet.subnet_1_cali", instance aws_subnet.subnet_1_cali
+2024-06-04T15:26:58.143+0700 [DEBUG] ReferenceTransformer: "aws_subnet.subnet_1_cali" references: []
+2024-06-04T15:26:58.143+0700 [DEBUG] refresh: aws_subnet.subnet_1_cali: no state, so not refreshing
+2024-06-04T15:26:58.144+0700 [DEBUG] refresh: aws_internet_gateway.igw-cali: no state, so not refreshing
+2024-06-04T15:26:58.144+0700 [DEBUG] refresh: aws_security_group.jenkins-sg-cali: no state, so not refreshing
+2024-06-04T15:26:58.153+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_subnet.subnet_1_cali, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .enable_resource_name_dns_a_record_on_launch: planned value cty.False for a non-computed attribute
+      - .map_public_ip_on_launch: planned value cty.False for a non-computed attribute
+      - .enable_dns64: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_aaaa_record_on_launch: planned value cty.False for a non-computed attribute
+      - .ipv6_native: planned value cty.False for a non-computed attribute
+      - .assign_ipv6_address_on_creation: planned value cty.False for a non-computed attribute
+2024-06-04T15:26:58.153+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_security_group.jenkins-sg-cali, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .ingress: planned value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal("Allow 22 from our public IP"), "from_port":cty.NumberIntVal(22), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(22)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("10.0.1.0/24")}), "description":cty.StringVal("Allow traffic from us-east-1"), "from_port":cty.NumberIntVal(0), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("-1"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(0)})}) does not match config value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal("Allow 22 from our public IP"), "from_port":cty.NumberIntVal(22), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(22)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("10.0.1.0/24")}), "description":cty.StringVal("Allow traffic from us-east-1"), "from_port":cty.NumberIntVal(0), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("-1"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(0)})})
+      - .revoke_rules_on_delete: planned value cty.False for a non-computed attribute
+      - .egress: planned value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(0), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("-1"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(0)})}) does not match config value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(0), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("-1"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(0)})})
+2024-06-04T15:26:58.918+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: HTTP Response Received: aws.region=us-east-1
+  http.response.body=
+  | <GetCallerIdentityResponse xmlns="https://sts.amazonaws.com/doc/2011-06-15/">
+  |   <GetCallerIdentityResult>
+  |     <Arn>arn:aws:iam::959764676190:user/terraform-User</Arn>
+  |     <UserId>AIDA*************RSTX</UserId>
+  |     <Account>959764676190</Account>
+  |   </GetCallerIdentityResult>
+  |   <ResponseMetadata>
+  |     <RequestId>5b5b10e8-3f64-4bd4-b978-26ff51a78ead</RequestId>
+  |   </ResponseMetadata>
+  | </GetCallerIdentityResponse>
+   tf_aws.sdk=aws-sdk-go-v2 tf_req_id=9509dbfa-3daa-f363-6978-b65914d38ff2 @module=aws.aws-base http.duration=2755 http.response.header.x_amzn_requestid=5b5b10e8-3f64-4bd4-b978-26ff51a78ead rpc.service=STS tf_mux_provider="*schema.GRPCProviderServer" rpc.system=aws-api tf_rpc=ConfigureProvider http.response.header.content_type=text/xml http.response.header.date="Tue, 04 Jun 2024 08:26:58 GMT" http.response_content_length=411 http.status_code=200 rpc.method=GetCallerIdentity @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.52/logging/tf_logger.go:47 tf_aws.signing_region="" tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp="2024-06-04T15:26:58.918+0700"
+2024-06-04T15:26:58.918+0700 [INFO]  provider.terraform-provider-aws_v5.47.0_x5: Retrieved caller identity from STS: tf_provider_addr=registry.terraform.io/hashicorp/aws @module=aws.aws-base tf_mux_provider="*schema.GRPCProviderServer" tf_req_id=9509dbfa-3daa-f363-6978-b65914d38ff2 tf_rpc=ConfigureProvider @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.52/logging/tf_logger.go:39 timestamp="2024-06-04T15:26:58.918+0700"
+2024-06-04T15:26:58.920+0700 [DEBUG] Resource instance state not found for node "aws_key_pair.master-key", instance aws_key_pair.master-key
+2024-06-04T15:26:58.920+0700 [DEBUG] ReferenceTransformer: "aws_key_pair.master-key" references: []
+2024-06-04T15:26:58.920+0700 [DEBUG] Resource instance state not found for node "data.aws_route53_zone.dns", instance data.aws_route53_zone.dns
+2024-06-04T15:26:58.920+0700 [DEBUG] ReferenceTransformer: "data.aws_route53_zone.dns" references: []
+2024-06-04T15:26:58.920+0700 [DEBUG] Resource instance state not found for node "aws_vpc.vpc_master", instance aws_vpc.vpc_master
+2024-06-04T15:26:58.920+0700 [DEBUG] ReferenceTransformer: "aws_vpc.vpc_master" references: []
+2024-06-04T15:26:58.920+0700 [DEBUG] Resource instance state not found for node "data.aws_availability_zones.azs", instance data.aws_availability_zones.azs
+2024-06-04T15:26:58.920+0700 [DEBUG] ReferenceTransformer: "data.aws_availability_zones.azs" references: []
+2024-06-04T15:26:58.920+0700 [DEBUG] Resource instance state not found for node "data.aws_ssm_parameter.linuxAmi", instance data.aws_ssm_parameter.linuxAmi
+2024-06-04T15:26:58.921+0700 [DEBUG] ReferenceTransformer: "data.aws_ssm_parameter.linuxAmi" references: []
+2024-06-04T15:26:58.921+0700 [DEBUG] refresh: aws_key_pair.master-key: no state, so not refreshing
+2024-06-04T15:26:58.921+0700 [DEBUG] refresh: aws_vpc.vpc_master: no state, so not refreshing
+2024-06-04T15:26:58.937+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: [DEBUG] Reading Availability Zones.
+2024-06-04T15:26:58.937+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: [DEBUG] Reading Availability Zones: {
+2024-06-04T15:26:58.937+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5:   Filters: [{
+2024-06-04T15:26:58.937+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5:       Name: "state",
+2024-06-04T15:26:58.937+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5:       Values: ["available"]
+2024-06-04T15:26:58.937+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5:     }]
+2024-06-04T15:26:58.937+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: }
+2024-06-04T15:26:58.937+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: [DEBUG] Reading SSM Parameter: {
+2024-06-04T15:26:58.937+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5:   Name: "/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64",
+2024-06-04T15:26:58.937+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5:   WithDecryption: true
+2024-06-04T15:26:58.937+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: }
+2024-06-04T15:26:58.937+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: [DEBUG] Reading Route53 Zone: {
+2024-06-04T15:26:58.937+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5
+2024-06-04T15:26:58.937+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: }
+2024-06-04T15:26:58.937+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: HTTP Request Sent: aws.region=us-east-1 http.flavor=1.1 tf_aws.sdk=aws-sdk-go
+  http.request.body=
+  | Action=DescribeAvailabilityZones&Filter.1.Name=state&Filter.1.Value.1=available&Version=2016-11-15
+   http.url=https://ec2.us-east-1.amazonaws.com/ net.peer.name=ec2.us-east-1.amazonaws.com tf_req_id=aa47088d-fdbb-07db-6acc-11f9a582cf57 http.method=POST http.request.header.content_type="application/x-www-form-urlencoded; charset=utf-8" tf_data_source_type=aws_availability_zones tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.53/logger.go:109 @module=aws http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************YSN6/20240604/us-east-1/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=*****" rpc.service=EC2 rpc.system=aws-api tf_mux_provider="*schema.GRPCProviderServer" http.request.header.x_amz_date=20240604T082658Z http.request_content_length=98 http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.7.5 (+https://www.terraform.io) terraform-provider-aws/5.47.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.51.28 (go1.22.0; linux; 386)" rpc.method=DescribeAvailabilityZones tf_rpc=ReadDataSource timestamp="2024-06-04T15:26:58.937+0700"
+2024-06-04T15:26:58.938+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: HTTP Request Sent: http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.7.5 (+https://www.terraform.io) terraform-provider-aws/5.47.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.51.28 (go1.22.0; linux; 386)" rpc.system=aws-api tf_data_source_type=aws_ssm_parameter @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.53/logger.go:109
+  http.request.body=
+  | {"Name":"/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64","WithDecryption":true}
+   http.request.header.x_amz_target=AmazonSSM.GetParameter tf_mux_provider="*schema.GRPCProviderServer" tf_provider_addr=registry.terraform.io/hashicorp/aws @module=aws http.flavor=1.1 http.request_content_length=102 tf_aws.sdk=aws-sdk-go tf_req_id=e65deb94-d191-fe8b-c153-3cc32706cbaf tf_rpc=ReadDataSource http.request.header.content_type=application/x-amz-json-1.1 net.peer.name=ssm.us-east-1.amazonaws.com aws.region=us-east-1 http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************YSN6/20240604/us-east-1/ssm/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date;x-amz-target, Signature=*****" http.request.header.x_amz_date=20240604T082658Z http.url=https://ssm.us-east-1.amazonaws.com/ rpc.method=GetParameter http.method=POST rpc.service=SSM timestamp="2024-06-04T15:26:58.937+0700"
+2024-06-04T15:26:58.939+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: HTTP Request Sent: rpc.method=ListHostedZones rpc.system=aws-api tf_data_source_type=aws_route53_zone tf_provider_addr=registry.terraform.io/hashicorp/aws http.flavor=1.1 http.request.body="" http.request.header.x_amz_date=20240604T082658Z tf_rpc=ReadDataSource http.url=https://route53.amazonaws.com/2013-04-01/hostedzone http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.7.5 (+https://www.terraform.io) terraform-provider-aws/5.47.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.51.28 (go1.22.0; linux; 386)" net.peer.name=route53.amazonaws.com tf_aws.sdk=aws-sdk-go @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.53/logger.go:109 @module=aws http.method=GET http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************YSN6/20240604/us-east-1/route53/aws4_request, SignedHeaders=host;x-amz-date, Signature=*****" tf_mux_provider="*schema.GRPCProviderServer" tf_req_id=1fffe7e4-4f7f-81d9-54dd-c2bdd0dee5e0 aws.region=us-west-2 rpc.service="Route 53" tf_aws.signing_region=us-east-1 timestamp="2024-06-04T15:26:58.938+0700"
+2024-06-04T15:26:58.940+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_vpc.vpc_master, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .instance_tenancy: planned value cty.StringVal("default") for a non-computed attribute
+2024-06-04T15:26:58.940+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_key_pair.master-key, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .public_key: planned value cty.StringVal("ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDryA5D44+JoOI/8m1rKrYjDXTswaWkEFGru+AYvH9ga4CZS/hF+lZLRZ2W3X3h98HXiMvAQoyHpQwsRPJMGvF6ax2dtfx7l7Y86y/Cs+LP54YeQutkkHYXLvG2pUS7AEo/xMWnvNG+KF21KhjkvUDldHKwDvt7u4q22QKXr3SHuJdV2KvaVLvBC2KJa96Pv6+WL3crVaNa9HNZ/TV4bdw0znk28R0s4pNnI5LveKiFKvWTVPX1eIBB8eDBkeIVxYXnDXR9Kr9ewdWvC18RUnL30M3o+sPkn+oYfvJsCqBpl0PRlnt8SxB7/QZ58c5ZnNGYchfIaYka2cEcLfWKcE7ZYlsb3Uzm2Z8uJEq1pKGvl8FhecGVKpSWY1PINcRbyld4YtE3T7WDbxISHqtRWdn6xZR/UA0RHMMI5CGpQnVtwilM2lfIgfe3FDD+KYrgLmiKYaJLssrixZE9b+ic6zm0rGh+bYw0CJXtHxA82WFRWFMkSICsJuQ2UWrP4qISwc0= root@terraformSVR") does not match config value cty.StringVal("ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDryA5D44+JoOI/8m1rKrYjDXTswaWkEFGru+AYvH9ga4CZS/hF+lZLRZ2W3X3h98HXiMvAQoyHpQwsRPJMGvF6ax2dtfx7l7Y86y/Cs+LP54YeQutkkHYXLvG2pUS7AEo/xMWnvNG+KF21KhjkvUDldHKwDvt7u4q22QKXr3SHuJdV2KvaVLvBC2KJa96Pv6+WL3crVaNa9HNZ/TV4bdw0znk28R0s4pNnI5LveKiFKvWTVPX1eIBB8eDBkeIVxYXnDXR9Kr9ewdWvC18RUnL30M3o+sPkn+oYfvJsCqBpl0PRlnt8SxB7/QZ58c5ZnNGYchfIaYka2cEcLfWKcE7ZYlsb3Uzm2Z8uJEq1pKGvl8FhecGVKpSWY1PINcRbyld4YtE3T7WDbxISHqtRWdn6xZR/UA0RHMMI5CGpQnVtwilM2lfIgfe3FDD+KYrgLmiKYaJLssrixZE9b+ic6zm0rGh+bYw0CJXtHxA82WFRWFMkSICsJuQ2UWrP4qISwc0= root@terraformSVR\n")
+2024-06-04T15:26:58.940+0700 [DEBUG] Resource instance state not found for node "aws_security_group.lb-sg", instance aws_security_group.lb-sg
+2024-06-04T15:26:58.940+0700 [DEBUG] ReferenceTransformer: "aws_security_group.lb-sg" references: []
+2024-06-04T15:26:58.940+0700 [DEBUG] refresh: aws_security_group.lb-sg: no state, so not refreshing
+2024-06-04T15:26:58.941+0700 [DEBUG] Resource instance state not found for node "aws_lb_target_group.app-lb-tg", instance aws_lb_target_group.app-lb-tg
+2024-06-04T15:26:58.942+0700 [DEBUG] ReferenceTransformer: "aws_lb_target_group.app-lb-tg" references: []
+2024-06-04T15:26:58.942+0700 [DEBUG] Resource instance state not found for node "aws_vpc_peering_connection.useast1-uswest1", instance aws_vpc_peering_connection.useast1-uswest1
+2024-06-04T15:26:58.942+0700 [DEBUG] ReferenceTransformer: "aws_vpc_peering_connection.useast1-uswest1" references: []
+2024-06-04T15:26:58.942+0700 [DEBUG] refresh: aws_vpc_peering_connection.useast1-uswest1: no state, so not refreshing
+2024-06-04T15:26:58.942+0700 [DEBUG] Resource instance state not found for node "aws_internet_gateway.igw", instance aws_internet_gateway.igw
+2024-06-04T15:26:58.942+0700 [DEBUG] ReferenceTransformer: "aws_internet_gateway.igw" references: []
+2024-06-04T15:26:58.943+0700 [DEBUG] refresh: aws_lb_target_group.app-lb-tg: no state, so not refreshing
+2024-06-04T15:26:58.943+0700 [DEBUG] refresh: aws_internet_gateway.igw: no state, so not refreshing
+2024-06-04T15:26:58.962+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_vpc_peering_connection.useast1-uswest1, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .requester: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .accepter: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2024-06-04T15:26:58.963+0700 [DEBUG] Resource instance state not found for node "aws_vpc_peering_connection_accepter.accept_peering", instance aws_vpc_peering_connection_accepter.accept_peering
+2024-06-04T15:26:58.963+0700 [DEBUG] ReferenceTransformer: "aws_vpc_peering_connection_accepter.accept_peering" references: []
+2024-06-04T15:26:58.963+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_lb_target_group.app-lb-tg, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .deregistration_delay: planned value cty.StringVal("300") for a non-computed attribute
+      - .slow_start: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .lambda_multi_value_headers_enabled: planned value cty.False for a non-computed attribute
+      - .proxy_protocol_v2: planned value cty.False for a non-computed attribute
+      - .stickiness: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .target_failover: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .target_health_state: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .health_check[0].healthy_threshold: planned value cty.NumberIntVal(3) for a non-computed attribute
+      - .health_check[0].unhealthy_threshold: planned value cty.NumberIntVal(3) for a non-computed attribute
+2024-06-04T15:26:58.965+0700 [DEBUG] Resource instance state not found for node "aws_route_table.internet_route_cali", instance aws_route_table.internet_route_cali
+2024-06-04T15:26:58.965+0700 [DEBUG] ReferenceTransformer: "aws_route_table.internet_route_cali" references: []
+2024-06-04T15:26:58.965+0700 [DEBUG] Resource instance state not found for node "aws_route_table.internet_route", instance aws_route_table.internet_route
+2024-06-04T15:26:58.965+0700 [DEBUG] ReferenceTransformer: "aws_route_table.internet_route" references: []
+2024-06-04T15:26:58.965+0700 [DEBUG] refresh: aws_vpc_peering_connection_accepter.accept_peering: no state, so not refreshing
+2024-06-04T15:26:58.966+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_security_group.lb-sg, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .egress: planned value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(0), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("-1"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(0)})}) does not match config value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(0), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("-1"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(0)})})
+      - .ingress: planned value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal("Allow 443 from anywhere"), "from_port":cty.NumberIntVal(443), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(443)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal("Allow 80 from anywhere for redirection"), "from_port":cty.NumberIntVal(80), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(80)})}) does not match config value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal("Allow 443 from anywhere"), "from_port":cty.NumberIntVal(443), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(443)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal("Allow 80 from anywhere for redirection"), "from_port":cty.NumberIntVal(80), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(80)})})
+      - .revoke_rules_on_delete: planned value cty.False for a non-computed attribute
+2024-06-04T15:26:58.966+0700 [DEBUG] refresh: aws_route_table.internet_route_cali: no state, so not refreshing
+2024-06-04T15:26:58.967+0700 [DEBUG] Resource instance state not found for node "aws_security_group.jenkins-sg", instance aws_security_group.jenkins-sg
+2024-06-04T15:26:58.967+0700 [DEBUG] ReferenceTransformer: "aws_security_group.jenkins-sg" references: []
+2024-06-04T15:26:58.967+0700 [DEBUG] refresh: aws_route_table.internet_route: no state, so not refreshing
+2024-06-04T15:26:58.967+0700 [DEBUG] refresh: aws_security_group.jenkins-sg: no state, so not refreshing
+2024-06-04T15:26:58.994+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_security_group.jenkins-sg, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .revoke_rules_on_delete: planned value cty.False for a non-computed attribute
+      - .egress: planned value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(0), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("-1"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(0)})}) does not match config value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(0), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("-1"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(0)})})
+      - .ingress: planned value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal("Allow 22 from our public IP"), "from_port":cty.NumberIntVal(22), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(22)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("192.168.1.0/24")}), "description":cty.StringVal("allow traffic from us-west-1"), "from_port":cty.NumberIntVal(0), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("-1"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(0)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListValEmpty(cty.String), "description":cty.StringVal("allow anyone on port 8080"), "from_port":cty.NumberIntVal(8080), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.UnknownVal(cty.Set(cty.String)), "self":cty.False, "to_port":cty.NumberIntVal(8080)})}) does not match config value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal("Allow 22 from our public IP"), "from_port":cty.NumberIntVal(22), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(22)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("192.168.1.0/24")}), "description":cty.StringVal("allow traffic from us-west-1"), "from_port":cty.NumberIntVal(0), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("-1"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(0)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.NullVal(cty.List(cty.String)), "description":cty.StringVal("allow anyone on port 8080"), "from_port":cty.NumberIntVal(8080), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetVal([]cty.Value{cty.UnknownVal(cty.String)}), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(8080)})})
+2024-06-04T15:26:59.001+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_route_table.internet_route, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .route: planned value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"carrier_gateway_id":cty.StringVal(""), "cidr_block":cty.StringVal("0.0.0.0/0"), "core_network_arn":cty.StringVal(""), "destination_prefix_list_id":cty.StringVal(""), "egress_only_gateway_id":cty.StringVal(""), "gateway_id":cty.UnknownVal(cty.String), "ipv6_cidr_block":cty.StringVal(""), "local_gateway_id":cty.StringVal(""), "nat_gateway_id":cty.StringVal(""), "network_interface_id":cty.StringVal(""), "transit_gateway_id":cty.StringVal(""), "vpc_endpoint_id":cty.StringVal(""), "vpc_peering_connection_id":cty.StringVal("")}), cty.ObjectVal(map[string]cty.Value{"carrier_gateway_id":cty.StringVal(""), "cidr_block":cty.StringVal("192.168.1.0/24"), "core_network_arn":cty.StringVal(""), "destination_prefix_list_id":cty.StringVal(""), "egress_only_gateway_id":cty.StringVal(""), "gateway_id":cty.StringVal(""), "ipv6_cidr_block":cty.StringVal(""), "local_gateway_id":cty.StringVal(""), "nat_gateway_id":cty.StringVal(""), "network_interface_id":cty.StringVal(""), "transit_gateway_id":cty.StringVal(""), "vpc_endpoint_id":cty.StringVal(""), "vpc_peering_connection_id":cty.UnknownVal(cty.String)})}) does not match config value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"carrier_gateway_id":cty.NullVal(cty.String), "cidr_block":cty.StringVal("0.0.0.0/0"), "core_network_arn":cty.NullVal(cty.String), "destination_prefix_list_id":cty.NullVal(cty.String), "egress_only_gateway_id":cty.NullVal(cty.String), "gateway_id":cty.UnknownVal(cty.String), "ipv6_cidr_block":cty.NullVal(cty.String), "local_gateway_id":cty.NullVal(cty.String), "nat_gateway_id":cty.NullVal(cty.String), "network_interface_id":cty.NullVal(cty.String), "transit_gateway_id":cty.NullVal(cty.String), "vpc_endpoint_id":cty.NullVal(cty.String), "vpc_peering_connection_id":cty.NullVal(cty.String)}), cty.ObjectVal(map[string]cty.Value{"carrier_gateway_id":cty.NullVal(cty.String), "cidr_block":cty.StringVal("192.168.1.0/24"), "core_network_arn":cty.NullVal(cty.String), "destination_prefix_list_id":cty.NullVal(cty.String), "egress_only_gateway_id":cty.NullVal(cty.String), "gateway_id":cty.NullVal(cty.String), "ipv6_cidr_block":cty.NullVal(cty.String), "local_gateway_id":cty.NullVal(cty.String), "nat_gateway_id":cty.NullVal(cty.String), "network_interface_id":cty.NullVal(cty.String), "transit_gateway_id":cty.NullVal(cty.String), "vpc_endpoint_id":cty.NullVal(cty.String), "vpc_peering_connection_id":cty.UnknownVal(cty.String)})})
+2024-06-04T15:26:59.004+0700 [DEBUG] Resource instance state not found for node "aws_main_route_table_association.set-master-default-rt-assoc", instance aws_main_route_table_association.set-master-default-rt-assoc
+2024-06-04T15:26:59.004+0700 [DEBUG] ReferenceTransformer: "aws_main_route_table_association.set-master-default-rt-assoc" references: []
+2024-06-04T15:26:59.004+0700 [DEBUG] refresh: aws_main_route_table_association.set-master-default-rt-assoc: no state, so not refreshing
+2024-06-04T15:26:59.004+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_route_table.internet_route_cali, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .route: planned value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"carrier_gateway_id":cty.StringVal(""), "cidr_block":cty.StringVal("0.0.0.0/0"), "core_network_arn":cty.StringVal(""), "destination_prefix_list_id":cty.StringVal(""), "egress_only_gateway_id":cty.StringVal(""), "gateway_id":cty.UnknownVal(cty.String), "ipv6_cidr_block":cty.StringVal(""), "local_gateway_id":cty.StringVal(""), "nat_gateway_id":cty.StringVal(""), "network_interface_id":cty.StringVal(""), "transit_gateway_id":cty.StringVal(""), "vpc_endpoint_id":cty.StringVal(""), "vpc_peering_connection_id":cty.StringVal("")}), cty.ObjectVal(map[string]cty.Value{"carrier_gateway_id":cty.StringVal(""), "cidr_block":cty.StringVal("10.0.1.0/24"), "core_network_arn":cty.StringVal(""), "destination_prefix_list_id":cty.StringVal(""), "egress_only_gateway_id":cty.StringVal(""), "gateway_id":cty.StringVal(""), "ipv6_cidr_block":cty.StringVal(""), "local_gateway_id":cty.StringVal(""), "nat_gateway_id":cty.StringVal(""), "network_interface_id":cty.StringVal(""), "transit_gateway_id":cty.StringVal(""), "vpc_endpoint_id":cty.StringVal(""), "vpc_peering_connection_id":cty.UnknownVal(cty.String)})}) does not match config value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"carrier_gateway_id":cty.NullVal(cty.String), "cidr_block":cty.StringVal("0.0.0.0/0"), "core_network_arn":cty.NullVal(cty.String), "destination_prefix_list_id":cty.NullVal(cty.String), "egress_only_gateway_id":cty.NullVal(cty.String), "gateway_id":cty.UnknownVal(cty.String), "ipv6_cidr_block":cty.NullVal(cty.String), "local_gateway_id":cty.NullVal(cty.String), "nat_gateway_id":cty.NullVal(cty.String), "network_interface_id":cty.NullVal(cty.String), "transit_gateway_id":cty.NullVal(cty.String), "vpc_endpoint_id":cty.NullVal(cty.String), "vpc_peering_connection_id":cty.NullVal(cty.String)}), cty.ObjectVal(map[string]cty.Value{"carrier_gateway_id":cty.NullVal(cty.String), "cidr_block":cty.StringVal("10.0.1.0/24"), "core_network_arn":cty.NullVal(cty.String), "destination_prefix_list_id":cty.NullVal(cty.String), "egress_only_gateway_id":cty.NullVal(cty.String), "gateway_id":cty.NullVal(cty.String), "ipv6_cidr_block":cty.NullVal(cty.String), "local_gateway_id":cty.NullVal(cty.String), "nat_gateway_id":cty.NullVal(cty.String), "network_interface_id":cty.NullVal(cty.String), "transit_gateway_id":cty.NullVal(cty.String), "vpc_endpoint_id":cty.NullVal(cty.String), "vpc_peering_connection_id":cty.UnknownVal(cty.String)})})
+2024-06-04T15:26:59.005+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_vpc_peering_connection_accepter.accept_peering, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .accepter: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .requester: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2024-06-04T15:26:59.008+0700 [DEBUG] Resource instance state not found for node "aws_main_route_table_association.set-worker-default-rt-assoc", instance aws_main_route_table_association.set-worker-default-rt-assoc
+2024-06-04T15:26:59.008+0700 [DEBUG] ReferenceTransformer: "aws_main_route_table_association.set-worker-default-rt-assoc" references: []
+2024-06-04T15:26:59.009+0700 [DEBUG] refresh: aws_main_route_table_association.set-worker-default-rt-assoc: no state, so not refreshing
+2024-06-04T15:27:01.046+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: HTTP Response Received: http.response.header.content_type=application/x-amz-json-1.1 tf_mux_provider="*schema.GRPCProviderServer" tf_rpc=ReadDataSource @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.53/logger.go:157
+  http.response.body=
+  | {"Parameter":{"ARN":"arn:aws:ssm:us-west-1::parameter/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2","DataType":"text","LastModifiedDate":1.717111285183E9,"Name":"/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2","Type":"String","Value":"ami-00b9ad54ecc71c09d","Version":118}}
+   http.response.header.x_amzn_requestid=1a09e0b8-1162-4667-b9c6-8995738da694 http.status_code=200 rpc.service=SSM tf_aws.sdk=aws-sdk-go aws.region=us-west-1 http.response.header.date="Tue, 04 Jun 2024 08:27:00 GMT" http.response.header.server=Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=cc9d61bb-fdce-96e9-46d0-885627cb66c8 http.duration=2907 http.response.header.connection=keep-alive rpc.method=GetParameter rpc.system=aws-api tf_data_source_type=aws_ssm_parameter @module=aws timestamp="2024-06-04T15:27:01.045+0700"
+2024-06-04T15:27:01.655+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: HTTP Response Received: http.response.header.x_amzn_requestid=ac58fc33-3042-43de-a9d7-bc95a28fcdbf tf_aws.sdk=aws-sdk-go tf_rpc=ReadDataSource http.response.header.content_type=text/xml;charset=UTF-8 http.response.header.strict_transport_security="max-age=31536000; includeSubDomains" http.response.header.vary=accept-encoding aws.region=us-east-1 tf_data_source_type=aws_availability_zones tf_mux_provider="*schema.GRPCProviderServer" http.response.header.cache_control="no-cache, no-store" http.response.header.date="Tue, 04 Jun 2024 08:27:00 GMT" http.response.header.server=AmazonEC2
+  http.response.body=
+  | <?xml version="1.0" encoding="UTF-8"?>
+  | <DescribeAvailabilityZonesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+  |     <requestId>ac58fc33-3042-43de-a9d7-bc95a28fcdbf</requestId>
+  |     <availabilityZoneInfo>
+  |         <item>
+  |             <zoneName>us-east-1a</zoneName>
+  |             <zoneId>use1-az1</zoneId>
+  |             <zoneState>available</zoneState>
+  |             <regionName>us-east-1</regionName>
+  |             <groupName>us-east-1</groupName>
+  |             <optInStatus>opt-in-not-required</optInStatus>
+  |             <networkBorderGroup>us-east-1</networkBorderGroup>
+  |             <zoneType>availability-zone</zoneType>
+  |             <messageSet/>
+  |         </item>
+  |         <item>
+  |             <zoneName>us-east-1b</zoneName>
+  |             <zoneId>use1-az2</zoneId>
+  |             <zoneState>available</zoneState>
+  |             <regionName>us-east-1</regionName>
+  |             <groupName>us-east-1</groupName>
+  |             <optInStatus>opt-in-not-required</optInStatus>
+  |             <networkBorderGroup>us-east-1</networkBorderGroup>
+  |             <zoneType>availability-zone</zoneType>
+  |             <messageSet/>
+  |         </item>
+  |         <item>
+  |             <zoneName>us-east-1c</zoneName>
+  |             <zoneId>use1-az4</zoneId>
+  |             <zoneState>available</zoneState>
+  |             <regionName>us-east-1</regionName>
+  |             <groupName>us-east-1</groupName>
+  |             <optInStatus>opt-in-not-required</optInStatus>
+  |             <networkBorderGroup>us-east-1</networkBorderGroup>
+  |             <zoneType>availability-zone</zoneType>
+  |             <messageSet/>
+  |         </item>
+  |         <item>
+  |             <zoneName>us-east-1d</zoneName>
+  |             <zoneId>use1-az6</zoneId>
+  |             <zoneState>available</zoneState>
+  |             <regionName>us-east-1</regionName>
+  |             <groupName>us-east-1</groupName>
+  |             <optInStatus>opt-in-not-required</optInStatus>
+  |             <networkBorderGroup>us-east-1</networkBorderGroup>
+  |             <zoneType>availability-zone</zoneType>
+  |             <messageSet/>
+  |         </item>
+  |         <item>
+  |             <zoneName>us-east-1e</zoneName>
+  |             <zoneId>use1-az3</zoneId>
+  |             <zoneState>available</zoneState>
+  |             <regionName>us-east-1</regionName>
+  |             <groupName>us-east-1</groupName>
+  |             <optInStatus>opt-in-not-required</optInStatus>
+  |             <networkBorderGroup>us-east-1</networkBorderGroup>
+  |             <zoneType>availability-zone</zoneType>
+  |             <messageSet/>
+  |         </item>
+  |         <item>
+  |             <zoneName>us-east-1f</zoneName>
+  |             <zoneId>use1-az5</zoneId>
+  |             <zoneState>available</zoneState>
+  |             <regionName>us-east-1</regionName>
+  |             <groupName>us-east-1</groupName>
+  |             <optInStatus>opt-in-not-required</optInStatus>
+  |             <networkBorderGroup>us-east-1</networkBorderGroup>
+  |             <zoneType>availability-zone</zoneType>
+  |             <messageSet/>
+  |         </item>
+  |     </availabilityZoneInfo>
+  | </DescribeAvailabilityZonesResponse>
+   rpc.method=DescribeAvailabilityZones http.status_code=200 rpc.system=aws-api tf_req_id=aa47088d-fdbb-07db-6acc-11f9a582cf57 @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.53/logger.go:157 @module=aws http.duration=2717 tf_provider_addr=registry.terraform.io/hashicorp/aws rpc.service=EC2 timestamp="2024-06-04T15:27:01.655+0700"
+2024-06-04T15:27:01.656+0700 [DEBUG] Resource instance state not found for node "aws_subnet.subnet_1", instance aws_subnet.subnet_1
+2024-06-04T15:27:01.656+0700 [DEBUG] ReferenceTransformer: "aws_subnet.subnet_1" references: []
+2024-06-04T15:27:01.656+0700 [DEBUG] Resource instance state not found for node "aws_subnet.subnet_2", instance aws_subnet.subnet_2
+2024-06-04T15:27:01.657+0700 [DEBUG] ReferenceTransformer: "aws_subnet.subnet_2" references: []
+2024-06-04T15:27:01.657+0700 [DEBUG] refresh: aws_subnet.subnet_1: no state, so not refreshing
+2024-06-04T15:27:01.657+0700 [DEBUG] refresh: aws_subnet.subnet_2: no state, so not refreshing
+2024-06-04T15:27:01.666+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_subnet.subnet_2, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .enable_resource_name_dns_aaaa_record_on_launch: planned value cty.False for a non-computed attribute
+      - .ipv6_native: planned value cty.False for a non-computed attribute
+      - .assign_ipv6_address_on_creation: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_a_record_on_launch: planned value cty.False for a non-computed attribute
+      - .map_public_ip_on_launch: planned value cty.False for a non-computed attribute
+      - .enable_dns64: planned value cty.False for a non-computed attribute
+2024-06-04T15:27:01.666+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_subnet.subnet_1, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .enable_dns64: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_a_record_on_launch: planned value cty.False for a non-computed attribute
+      - .map_public_ip_on_launch: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_aaaa_record_on_launch: planned value cty.False for a non-computed attribute
+      - .ipv6_native: planned value cty.False for a non-computed attribute
+      - .assign_ipv6_address_on_creation: planned value cty.False for a non-computed attribute
+2024-06-04T15:27:01.667+0700 [DEBUG] Resource instance state not found for node "aws_lb.application-lb", instance aws_lb.application-lb
+2024-06-04T15:27:01.668+0700 [DEBUG] ReferenceTransformer: "aws_lb.application-lb" references: []
+2024-06-04T15:27:01.668+0700 [DEBUG] refresh: aws_lb.application-lb: no state, so not refreshing
+2024-06-04T15:27:01.680+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_lb.application-lb, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .preserve_host_header: planned value cty.False for a non-computed attribute
+      - .enable_tls_version_and_cipher_suite_headers: planned value cty.False for a non-computed attribute
+      - .enable_waf_fail_open: planned value cty.False for a non-computed attribute
+      - .drop_invalid_header_fields: planned value cty.False for a non-computed attribute
+      - .enable_http2: planned value cty.True for a non-computed attribute
+      - .subnets: planned value cty.UnknownVal(cty.Set(cty.String)) does not match config value cty.SetVal([]cty.Value{cty.UnknownVal(cty.String), cty.UnknownVal(cty.String)})
+      - .idle_timeout: planned value cty.NumberIntVal(60) for a non-computed attribute
+      - .desync_mitigation_mode: planned value cty.StringVal("defensive") for a non-computed attribute
+      - .enable_deletion_protection: planned value cty.False for a non-computed attribute
+      - .security_groups: planned value cty.UnknownVal(cty.Set(cty.String)) does not match config value cty.SetVal([]cty.Value{cty.UnknownVal(cty.String)})
+      - .xff_header_processing_mode: planned value cty.StringVal("append") for a non-computed attribute
+      - .client_keep_alive: planned value cty.NumberIntVal(3600) for a non-computed attribute
+      - .enable_xff_client_port: planned value cty.False for a non-computed attribute
+      - .subnet_mapping: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2024-06-04T15:27:01.681+0700 [DEBUG] Resource instance state not found for node "aws_lb_listener.jenkins-listener-http", instance aws_lb_listener.jenkins-listener-http
+2024-06-04T15:27:01.681+0700 [DEBUG] ReferenceTransformer: "aws_lb_listener.jenkins-listener-http" references: []
+2024-06-04T15:27:01.683+0700 [DEBUG] refresh: aws_lb_listener.jenkins-listener-http: no state, so not refreshing
+2024-06-04T15:27:01.691+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_lb_listener.jenkins-listener-http, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .default_action[0].redirect[0].host: planned value cty.StringVal("#{host}") for a non-computed attribute
+      - .default_action[0].redirect[0].path: planned value cty.StringVal("/#{path}") for a non-computed attribute
+      - .default_action[0].redirect[0].query: planned value cty.StringVal("#{query}") for a non-computed attribute
+      - .mutual_authentication: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2024-06-04T15:27:02.699+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: HTTP Response Received: http.response.header.connection=keep-alive tf_rpc=ReadDataSource @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.53/logger.go:157 rpc.service=SSM tf_aws.sdk=aws-sdk-go tf_data_source_type=aws_ssm_parameter http.response.header.x_amzn_requestid=3001d1d3-8157-4a71-9876-57f0e55aa576 aws.region=us-east-1 http.duration=3761 http.response.header.content_type=application/x-amz-json-1.1 http.response.header.date="Tue, 04 Jun 2024 08:27:02 GMT" http.status_code=200 rpc.method=GetParameter @module=aws tf_provider_addr=registry.terraform.io/hashicorp/aws
+  http.response.body=
+  | {"Parameter":{"ARN":"arn:aws:ssm:us-east-1::parameter/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64","DataType":"text","LastModifiedDate":1.716917100855E9,"Name":"/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64","Type":"String","Value":"ami-00beae93a2d981137","Version":76}}
+   http.response.header.server=Server rpc.system=aws-api tf_mux_provider="*schema.GRPCProviderServer" tf_req_id=e65deb94-d191-fe8b-c153-3cc32706cbaf timestamp="2024-06-04T15:27:02.699+0700"
+2024-06-04T15:27:02.699+0700 [DEBUG] Resource instance state not found for node "aws_instance.jenkins-master", instance aws_instance.jenkins-master
+2024-06-04T15:27:02.699+0700 [DEBUG] ReferenceTransformer: "aws_instance.jenkins-master" references: []
+2024-06-04T15:27:02.700+0700 [DEBUG] refresh: aws_instance.jenkins-master: no state, so not refreshing
+2024-06-04T15:27:02.710+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_instance.jenkins-master, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .source_dest_check: planned value cty.True for a non-computed attribute
+      - .get_password_data: planned value cty.False for a non-computed attribute
+      - .vpc_security_group_ids: planned value cty.UnknownVal(cty.Set(cty.String)) does not match config value cty.SetVal([]cty.Value{cty.UnknownVal(cty.String)})
+      - .user_data_replace_on_change: planned value cty.False for a non-computed attribute
+      - .enclave_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .capacity_reservation_specification: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .cpu_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .metadata_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .root_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .private_dns_name_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .instance_market_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .maintenance_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .network_interface: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .ebs_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .ephemeral_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2024-06-04T15:27:02.711+0700 [DEBUG] Resource instance state not found for node "aws_instance.jenkins-worker-cali[0]", instance aws_instance.jenkins-worker-cali[0]
+2024-06-04T15:27:02.711+0700 [DEBUG] Resource instance state not found for node "aws_instance.jenkins-worker-cali[1]", instance aws_instance.jenkins-worker-cali[1]
+2024-06-04T15:27:02.712+0700 [DEBUG] ReferenceTransformer: "aws_instance.jenkins-worker-cali[0]" references: []
+2024-06-04T15:27:02.712+0700 [DEBUG] ReferenceTransformer: "aws_instance.jenkins-worker-cali[1]" references: []
+2024-06-04T15:27:02.712+0700 [DEBUG] Resource instance state not found for node "aws_lb_target_group_attachment.jenkins-master-attach", instance aws_lb_target_group_attachment.jenkins-master-attach
+2024-06-04T15:27:02.712+0700 [DEBUG] ReferenceTransformer: "aws_lb_target_group_attachment.jenkins-master-attach" references: []
+2024-06-04T15:27:02.712+0700 [DEBUG] refresh: aws_instance.jenkins-worker-cali[0]: no state, so not refreshing
+2024-06-04T15:27:02.714+0700 [DEBUG] refresh: aws_instance.jenkins-worker-cali[1]: no state, so not refreshing
+2024-06-04T15:27:02.716+0700 [DEBUG] refresh: aws_lb_target_group_attachment.jenkins-master-attach: no state, so not refreshing
+2024-06-04T15:27:02.728+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_instance.jenkins-worker-cali[1], but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .source_dest_check: planned value cty.True for a non-computed attribute
+      - .get_password_data: planned value cty.False for a non-computed attribute
+      - .tags: planned value cty.UnknownVal(cty.Map(cty.String)) does not match config value cty.MapVal(map[string]cty.Value{"Master_Private_IP":cty.UnknownVal(cty.String), "Name":cty.StringVal("jenkins_worker_tf_2")})
+      - .vpc_security_group_ids: planned value cty.UnknownVal(cty.Set(cty.String)) does not match config value cty.SetVal([]cty.Value{cty.UnknownVal(cty.String)})
+      - .user_data_replace_on_change: planned value cty.False for a non-computed attribute
+      - .capacity_reservation_specification: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .cpu_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .enclave_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .metadata_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .private_dns_name_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .root_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .ebs_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .ephemeral_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .instance_market_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .maintenance_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .network_interface: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2024-06-04T15:27:02.729+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_instance.jenkins-worker-cali[0], but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .user_data_replace_on_change: planned value cty.False for a non-computed attribute
+      - .source_dest_check: planned value cty.True for a non-computed attribute
+      - .get_password_data: planned value cty.False for a non-computed attribute
+      - .tags: planned value cty.UnknownVal(cty.Map(cty.String)) does not match config value cty.MapVal(map[string]cty.Value{"Master_Private_IP":cty.UnknownVal(cty.String), "Name":cty.StringVal("jenkins_worker_tf_1")})
+      - .vpc_security_group_ids: planned value cty.UnknownVal(cty.Set(cty.String)) does not match config value cty.SetVal([]cty.Value{cty.UnknownVal(cty.String)})
+      - .metadata_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .private_dns_name_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .root_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .maintenance_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .network_interface: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .ebs_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .ephemeral_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .instance_market_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .enclave_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .capacity_reservation_specification: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .cpu_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2024-06-04T15:27:02.735+0700 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2024-06-04T15:27:02.737+0700 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5 pid=39775
+2024-06-04T15:27:02.737+0700 [DEBUG] provider: plugin exited
+2024-06-04T15:27:03.434+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: HTTP Response Received: http.response.header.date="Tue, 04 Jun 2024 08:27:03 GMT" rpc.service="Route 53" rpc.system=aws-api tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=1fffe7e4-4f7f-81d9-54dd-c2bdd0dee5e0 @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.53/logger.go:157 @module=aws http.response.header.content_type=text/xml http.response_content_length=496 http.status_code=200 rpc.method=ListHostedZones tf_data_source_type=aws_route53_zone tf_rpc=ReadDataSource aws.region=us-west-2 http.duration=4496 http.response.header.x_amzn_requestid=5e919eaa-7d99-44e7-ac8e-76cbd2c94ea8
+  http.response.body=
+  | <?xml version="1.0"?>
+  | <ListHostedZonesResponse xmlns="https://route53.amazonaws.com/doc/2013-04-01/"><HostedZones><HostedZone><Id>/hostedzone/Z05642243TQ300PIBB7XM</Id><Name>learnaws.website.</Name><CallerReference>e6454b28-2594-4800-815c-4fc4d97a7745</CallerReference><Config><Comment></Comment><PrivateZone>false</PrivateZone></Config><ResourceRecordSetCount>2</ResourceRecordSetCount></HostedZone></HostedZones><IsTruncated>false</IsTruncated><MaxItems>100</MaxItems></ListHostedZonesResponse>
+   tf_aws.sdk=aws-sdk-go tf_aws.signing_region=us-east-1 tf_mux_provider="*schema.GRPCProviderServer" timestamp="2024-06-04T15:27:03.434+0700"
+2024-06-04T15:27:03.435+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: HTTP Request Sent: @module=aws http.flavor=1.1 tf_aws.sdk=aws-sdk-go tf_aws.signing_region=us-east-1 tf_mux_provider="*schema.GRPCProviderServer" tf_provider_addr=registry.terraform.io/hashicorp/aws http.request.body="" http.request.header.x_amz_date=20240604T082703Z http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.7.5 (+https://www.terraform.io) terraform-provider-aws/5.47.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.51.28 (go1.22.0; linux; 386)" net.peer.name=route53.amazonaws.com tf_rpc=ReadDataSource http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************YSN6/20240604/us-east-1/route53/aws4_request, SignedHeaders=host;x-amz-date, Signature=*****" http.url=https://route53.amazonaws.com/2013-04-01/hostedzone/Z05642243TQ300PIBB7XM rpc.method=GetHostedZone tf_req_id=1fffe7e4-4f7f-81d9-54dd-c2bdd0dee5e0 @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.53/logger.go:109 aws.region=us-west-2 http.method=GET rpc.service="Route 53" rpc.system=aws-api tf_data_source_type=aws_route53_zone timestamp="2024-06-04T15:27:03.435+0700"
+2024-06-04T15:27:03.830+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: HTTP Response Received: @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.53/logger.go:157
+  http.response.body=
+  | <?xml version="1.0"?>
+  | <GetHostedZoneResponse xmlns="https://route53.amazonaws.com/doc/2013-04-01/"><HostedZone><Id>/hostedzone/Z05642243TQ300PIBB7XM</Id><Name>learnaws.website.</Name><CallerReference>e6454b28-2594-4800-815c-4fc4d97a7745</CallerReference><Config><Comment></Comment><PrivateZone>false</PrivateZone></Config><ResourceRecordSetCount>2</ResourceRecordSetCount></HostedZone><DelegationSet><NameServers><NameServer>ns-1931.awsdns-49.co.uk</NameServer><NameServer>ns-36.awsdns-04.com</NameServer><NameServer>ns-1265.awsdns-30.org</NameServer><NameServer>ns-675.awsdns-20.net</NameServer></NameServers></DelegationSet><HostedZoneDeletionProtectionEnabled>false</HostedZoneDeletionProtectionEnabled></GetHostedZoneResponse>
+   http.response.header.date="Tue, 04 Jun 2024 08:27:03 GMT" rpc.method=GetHostedZone http.duration=394 http.response.header.x_amzn_requestid=dec23b44-e2a5-4b77-9e5c-7173f1259ebb rpc.system=aws-api tf_aws.sdk=aws-sdk-go tf_mux_provider="*schema.GRPCProviderServer" rpc.service="Route 53" tf_req_id=1fffe7e4-4f7f-81d9-54dd-c2bdd0dee5e0 tf_rpc=ReadDataSource tf_aws.signing_region=us-east-1 tf_data_source_type=aws_route53_zone @module=aws aws.region=us-west-2 http.response.header.content_type=text/xml http.response_content_length=730 http.status_code=200 tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp="2024-06-04T15:27:03.829+0700"
+2024-06-04T15:27:03.831+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: HTTP Request Sent: http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.7.5 (+https://www.terraform.io) terraform-provider-aws/5.47.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.51.28 (go1.22.0; linux; 386)" rpc.method=ListTagsForResource tf_aws.signing_region=us-east-1 @module=aws aws.region=us-west-2 http.flavor=1.1 http.request.body="" http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************YSN6/20240604/us-east-1/route53/aws4_request, SignedHeaders=host;x-amz-date, Signature=*****" tf_mux_provider="*schema.GRPCProviderServer" http.url=https://route53.amazonaws.com/2013-04-01/tags/hostedzone/Z05642243TQ300PIBB7XM rpc.system=aws-api tf_aws.sdk=aws-sdk-go tf_req_id=1fffe7e4-4f7f-81d9-54dd-c2bdd0dee5e0 tf_data_source_type=aws_route53_zone tf_provider_addr=registry.terraform.io/hashicorp/aws http.method=GET http.request.header.x_amz_date=20240604T082703Z net.peer.name=route53.amazonaws.com @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.53/logger.go:109 rpc.service="Route 53" tf_rpc=ReadDataSource timestamp="2024-06-04T15:27:03.830+0700"
+2024-06-04T15:27:04.144+0700 [DEBUG] provider.terraform-provider-aws_v5.47.0_x5: HTTP Response Received: http.response.header.content_type=text/xml http.response_content_length=260 rpc.method=ListTagsForResource rpc.service="Route 53" tf_aws.sdk=aws-sdk-go tf_provider_addr=registry.terraform.io/hashicorp/aws
+  http.response.body=
+  | <?xml version="1.0"?>
+  | <ListTagsForResourceResponse xmlns="https://route53.amazonaws.com/doc/2013-04-01/"><ResourceTagSet><ResourceType>hostedzone</ResourceType><ResourceId>Z05642243TQ300PIBB7XM</ResourceId><Tags/></ResourceTagSet></ListTagsForResourceResponse>
+   http.response.header.x_amzn_requestid=8c2cd569-6b1c-4055-8c32-0209c8f97001 http.status_code=200 rpc.system=aws-api tf_aws.signing_region=us-east-1 tf_mux_provider="*schema.GRPCProviderServer" @module=aws tf_data_source_type=aws_route53_zone tf_req_id=1fffe7e4-4f7f-81d9-54dd-c2bdd0dee5e0 tf_rpc=ReadDataSource @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.53/logger.go:157 aws.region=us-west-2 http.duration=313 http.response.header.date="Tue, 04 Jun 2024 08:27:04 GMT" timestamp="2024-06-04T15:27:04.144+0700"
+2024-06-04T15:27:04.146+0700 [DEBUG] Resource instance state not found for node "aws_route53_record.jenkins", instance aws_route53_record.jenkins
+2024-06-04T15:27:04.147+0700 [DEBUG] ReferenceTransformer: "aws_route53_record.jenkins" references: []
+2024-06-04T15:27:04.147+0700 [DEBUG] Resource instance state not found for node "aws_acm_certificate.jenkins-lb-https", instance aws_acm_certificate.jenkins-lb-https
+2024-06-04T15:27:04.147+0700 [DEBUG] ReferenceTransformer: "aws_acm_certificate.jenkins-lb-https" references: []
+2024-06-04T15:27:04.147+0700 [DEBUG] refresh: aws_route53_record.jenkins: no state, so not refreshing
+2024-06-04T15:27:04.148+0700 [DEBUG] refresh: aws_acm_certificate.jenkins-lb-https: no state, so not refreshing
+2024-06-04T15:27:04.157+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_acm_certificate.jenkins-lb-https, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2024-06-04T15:27:04.158+0700 [DEBUG] Resource instance state not found for node "aws_lb_listener.jenkins-listener-https", instance aws_lb_listener.jenkins-listener-https
+2024-06-04T15:27:04.158+0700 [DEBUG] ReferenceTransformer: "aws_lb_listener.jenkins-listener-https" references: []
+2024-06-04T15:27:04.159+0700 [DEBUG] Resource instance state not found for node "aws_route53_record.cert_validation[\"jenkins.learnaws.website\"]", instance aws_route53_record.cert_validation["jenkins.learnaws.website"]
+2024-06-04T15:27:04.159+0700 [DEBUG] ReferenceTransformer: "aws_route53_record.cert_validation[\"jenkins.learnaws.website\"]" references: []
+2024-06-04T15:27:04.160+0700 [DEBUG] refresh: aws_route53_record.cert_validation["jenkins.learnaws.website"]: no state, so not refreshing
+2024-06-04T15:27:04.161+0700 [DEBUG] refresh: aws_lb_listener.jenkins-listener-https: no state, so not refreshing
+2024-06-04T15:27:04.171+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_route53_record.cert_validation["jenkins.learnaws.website"], but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .records: planned value cty.UnknownVal(cty.Set(cty.String)) does not match config value cty.SetVal([]cty.Value{cty.UnknownVal(cty.String)})
+2024-06-04T15:27:04.172+0700 [DEBUG] Resource instance state not found for node "aws_acm_certificate_validation.cert[\"jenkins.learnaws.website\"]", instance aws_acm_certificate_validation.cert["jenkins.learnaws.website"]
+2024-06-04T15:27:04.172+0700 [DEBUG] ReferenceTransformer: "aws_acm_certificate_validation.cert[\"jenkins.learnaws.website\"]" references: []
+2024-06-04T15:27:04.172+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_lb_listener.jenkins-listener-https, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .mutual_authentication: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2024-06-04T15:27:04.173+0700 [DEBUG] refresh: aws_acm_certificate_validation.cert["jenkins.learnaws.website"]: no state, so not refreshing
+2024-06-04T15:27:04.177+0700 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_acm_certificate_validation.cert["jenkins.learnaws.website"], but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .validation_record_fqdns: planned value cty.UnknownVal(cty.Set(cty.String)) does not match config value cty.SetVal([]cty.Value{cty.UnknownVal(cty.String)})
+2024-06-04T15:27:04.178+0700 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2024-06-04T15:27:04.184+0700 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.47.0/linux_386/terraform-provider-aws_v5.47.0_x5 pid=39768
+2024-06-04T15:27:04.184+0700 [DEBUG] provider: plugin exited
+2024-06-04T15:27:04.186+0700 [DEBUG] building apply graph to check for errors
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_route_table.internet_route", instance aws_route_table.internet_route
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_lb_target_group_attachment.jenkins-master-attach", instance aws_lb_target_group_attachment.jenkins-master-attach
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_lb_listener.jenkins-listener-https", instance aws_lb_listener.jenkins-listener-https
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_main_route_table_association.set-master-default-rt-assoc", instance aws_main_route_table_association.set-master-default-rt-assoc
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_lb.application-lb", instance aws_lb.application-lb
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_acm_certificate_validation.cert[\"jenkins.learnaws.website\"]", instance aws_acm_certificate_validation.cert["jenkins.learnaws.website"]
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_internet_gateway.igw-cali", instance aws_internet_gateway.igw-cali
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_lb_listener.jenkins-listener-http", instance aws_lb_listener.jenkins-listener-http
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_instance.jenkins-master", instance aws_instance.jenkins-master
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_security_group.jenkins-sg-cali", instance aws_security_group.jenkins-sg-cali
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_key_pair.master-key", instance aws_key_pair.master-key
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_lb_target_group.app-lb-tg", instance aws_lb_target_group.app-lb-tg
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_key_pair.worker-key", instance aws_key_pair.worker-key
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_internet_gateway.igw", instance aws_internet_gateway.igw
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_route53_record.jenkins", instance aws_route53_record.jenkins
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_acm_certificate.jenkins-lb-https", instance aws_acm_certificate.jenkins-lb-https
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_vpc.vpc_master", instance aws_vpc.vpc_master
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_subnet.subnet_1", instance aws_subnet.subnet_1
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_instance.jenkins-worker-cali[1]", instance aws_instance.jenkins-worker-cali[1]
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_subnet.subnet_1_cali", instance aws_subnet.subnet_1_cali
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_security_group.lb-sg", instance aws_security_group.lb-sg
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_vpc_peering_connection_accepter.accept_peering", instance aws_vpc_peering_connection_accepter.accept_peering
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_vpc_peering_connection.useast1-uswest1", instance aws_vpc_peering_connection.useast1-uswest1
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_subnet.subnet_2", instance aws_subnet.subnet_2
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_security_group.jenkins-sg", instance aws_security_group.jenkins-sg
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_route_table.internet_route_cali", instance aws_route_table.internet_route_cali
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_route53_record.cert_validation[\"jenkins.learnaws.website\"]", instance aws_route53_record.cert_validation["jenkins.learnaws.website"]
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_vpc.vpc_master_cali", instance aws_vpc.vpc_master_cali
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_instance.jenkins-worker-cali[0]", instance aws_instance.jenkins-worker-cali[0]
+2024-06-04T15:27:04.187+0700 [DEBUG] Resource state not found for node "aws_main_route_table_association.set-worker-default-rt-assoc", instance aws_main_route_table_association.set-worker-default-rt-assoc
+2024-06-04T15:27:04.189+0700 [DEBUG] ProviderTransformer: "aws_lb_target_group_attachment.jenkins-master-attach (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.189+0700 [DEBUG] ProviderTransformer: "data.aws_ssm_parameter.linuxAmicali (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:27:04.189+0700 [DEBUG] ProviderTransformer: "aws_instance.jenkins-master (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.189+0700 [DEBUG] ProviderTransformer: "aws_security_group.jenkins-sg" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.189+0700 [DEBUG] ProviderTransformer: "aws_acm_certificate.jenkins-lb-https (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.189+0700 [DEBUG] ProviderTransformer: "aws_route53_record.jenkins (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.189+0700 [DEBUG] ProviderTransformer: "aws_vpc_peering_connection_accepter.accept_peering" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:27:04.189+0700 [DEBUG] ProviderTransformer: "aws_vpc.vpc_master_cali" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:27:04.189+0700 [DEBUG] ProviderTransformer: "aws_lb_target_group.app-lb-tg (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.189+0700 [DEBUG] ProviderTransformer: "aws_security_group.jenkins-sg-cali" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:27:04.189+0700 [DEBUG] ProviderTransformer: "aws_subnet.subnet_1 (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.189+0700 [DEBUG] ProviderTransformer: "aws_lb_listener.jenkins-listener-http (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.189+0700 [DEBUG] ProviderTransformer: "aws_subnet.subnet_2 (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.189+0700 [DEBUG] ProviderTransformer: "aws_route_table.internet_route_cali" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:27:04.189+0700 [DEBUG] ProviderTransformer: "aws_vpc.vpc_master (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.189+0700 [DEBUG] ProviderTransformer: "aws_acm_certificate_validation.cert[\"jenkins.learnaws.website\"]" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.189+0700 [DEBUG] ProviderTransformer: "aws_lb_listener.jenkins-listener-http" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_subnet.subnet_1_cali" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_lb_target_group_attachment.jenkins-master-attach" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_lb_listener.jenkins-listener-https" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_internet_gateway.igw-cali" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_instance.jenkins-master" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_subnet.subnet_1_cali (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_security_group.lb-sg" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_key_pair.master-key (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_main_route_table_association.set-worker-default-rt-assoc" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_route_table.internet_route" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_route_table.internet_route (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_vpc_peering_connection.useast1-uswest1 (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_acm_certificate_validation.cert (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_security_group.jenkins-sg-cali (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_internet_gateway.igw-cali (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_main_route_table_association.set-worker-default-rt-assoc (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_lb.application-lb" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_vpc_peering_connection_accepter.accept_peering (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_route53_record.cert_validation (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_main_route_table_association.set-master-default-rt-assoc" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_key_pair.master-key" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_vpc.vpc_master_cali (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_vpc_peering_connection.useast1-uswest1" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "data.aws_availability_zones.azs (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_internet_gateway.igw" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_route53_record.jenkins" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "data.aws_route53_zone.dns (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_main_route_table_association.set-master-default-rt-assoc (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_instance.jenkins-worker-cali[1]" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_internet_gateway.igw (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "aws_route53_record.cert_validation[\"jenkins.learnaws.website\"]" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.190+0700 [DEBUG] ProviderTransformer: "data.aws_ssm_parameter.linuxAmi (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.191+0700 [DEBUG] ProviderTransformer: "aws_acm_certificate.jenkins-lb-https" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.191+0700 [DEBUG] ProviderTransformer: "aws_route_table.internet_route_cali (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:27:04.191+0700 [DEBUG] ProviderTransformer: "aws_instance.jenkins-worker-cali (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:27:04.191+0700 [DEBUG] ProviderTransformer: "aws_lb_listener.jenkins-listener-https (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.191+0700 [DEBUG] ProviderTransformer: "aws_key_pair.worker-key (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:27:04.191+0700 [DEBUG] ProviderTransformer: "aws_vpc.vpc_master" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.191+0700 [DEBUG] ProviderTransformer: "aws_subnet.subnet_1" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.191+0700 [DEBUG] ProviderTransformer: "aws_security_group.lb-sg (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.191+0700 [DEBUG] ProviderTransformer: "aws_security_group.jenkins-sg (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.191+0700 [DEBUG] ProviderTransformer: "aws_lb_target_group.app-lb-tg" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.191+0700 [DEBUG] ProviderTransformer: "aws_key_pair.worker-key" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:27:04.191+0700 [DEBUG] ProviderTransformer: "aws_lb.application-lb (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.191+0700 [DEBUG] ProviderTransformer: "aws_subnet.subnet_2" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-master
+2024-06-04T15:27:04.191+0700 [DEBUG] ProviderTransformer: "aws_instance.jenkins-worker-cali[0]" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"].region-worker
+2024-06-04T15:27:04.192+0700 [DEBUG] pruning unused provider["registry.terraform.io/hashicorp/aws"]
+2024-06-04T15:27:04.195+0700 [DEBUG] ReferenceTransformer: "aws_acm_certificate.jenkins-lb-https (expand)" references: [data.aws_route53_zone.dns (expand)]
+2024-06-04T15:27:04.195+0700 [DEBUG] ReferenceTransformer: "data.aws_ssm_parameter.linuxAmi (expand)" references: []
+2024-06-04T15:27:04.195+0700 [DEBUG] ReferenceTransformer: "data.aws_availability_zones.azs (expand)" references: []
+2024-06-04T15:27:04.195+0700 [DEBUG] ReferenceTransformer: "var.region-worker" references: []
+2024-06-04T15:27:04.195+0700 [DEBUG] ReferenceTransformer: "aws_route_table.internet_route" references: [aws_vpc.vpc_master aws_vpc.vpc_master aws_vpc.vpc_master (expand) aws_internet_gateway.igw aws_internet_gateway.igw aws_internet_gateway.igw (expand) aws_vpc_peering_connection.useast1-uswest1 (expand) aws_vpc_peering_connection.useast1-uswest1 aws_vpc_peering_connection.useast1-uswest1]
+2024-06-04T15:27:04.195+0700 [DEBUG] ReferenceTransformer: "aws_lb_target_group_attachment.jenkins-master-attach" references: [var.webserver-port aws_lb_target_group.app-lb-tg aws_lb_target_group.app-lb-tg aws_lb_target_group.app-lb-tg (expand) aws_instance.jenkins-master aws_instance.jenkins-master aws_instance.jenkins-master (expand)]
+2024-06-04T15:27:04.195+0700 [DEBUG] ReferenceTransformer: "aws_lb_listener.jenkins-listener-https" references: [aws_lb.application-lb aws_lb.application-lb aws_lb.application-lb (expand) aws_acm_certificate.jenkins-lb-https (expand) aws_acm_certificate.jenkins-lb-https aws_acm_certificate.jenkins-lb-https aws_lb_target_group.app-lb-tg aws_lb_target_group.app-lb-tg aws_lb_target_group.app-lb-tg (expand)]
+2024-06-04T15:27:04.195+0700 [DEBUG] ReferenceTransformer: "aws_lb_listener.jenkins-listener-https (expand)" references: [aws_acm_certificate.jenkins-lb-https (expand) aws_acm_certificate.jenkins-lb-https aws_acm_certificate.jenkins-lb-https aws_lb.application-lb aws_lb.application-lb aws_lb.application-lb (expand) aws_lb_target_group.app-lb-tg aws_lb_target_group.app-lb-tg aws_lb_target_group.app-lb-tg (expand)]
+2024-06-04T15:27:04.195+0700 [DEBUG] ReferenceTransformer: "aws_route_table.internet_route (expand)" references: [aws_vpc.vpc_master aws_vpc.vpc_master aws_vpc.vpc_master (expand) aws_internet_gateway.igw aws_internet_gateway.igw aws_internet_gateway.igw (expand) aws_vpc_peering_connection.useast1-uswest1 (expand) aws_vpc_peering_connection.useast1-uswest1 aws_vpc_peering_connection.useast1-uswest1]
+2024-06-04T15:27:04.196+0700 [DEBUG] ReferenceTransformer: "output.LB-DNS-NAME (expand)" references: [aws_lb.application-lb aws_lb.application-lb aws_lb.application-lb (expand)]
+2024-06-04T15:27:04.196+0700 [DEBUG] ReferenceTransformer: "aws_main_route_table_association.set-master-default-rt-assoc" references: [aws_route_table.internet_route aws_route_table.internet_route aws_route_table.internet_route (expand) aws_vpc.vpc_master aws_vpc.vpc_master aws_vpc.vpc_master (expand)]
+2024-06-04T15:27:04.196+0700 [DEBUG] ReferenceTransformer: "aws_lb.application-lb" references: [aws_subnet.subnet_1 aws_subnet.subnet_1 aws_subnet.subnet_1 (expand) aws_subnet.subnet_2 (expand) aws_subnet.subnet_2 aws_subnet.subnet_2 aws_security_group.lb-sg aws_security_group.lb-sg aws_security_group.lb-sg (expand)]
+2024-06-04T15:27:04.196+0700 [DEBUG] ReferenceTransformer: "aws_acm_certificate_validation.cert[\"jenkins.learnaws.website\"]" references: [aws_route53_record.cert_validation (expand) aws_route53_record.cert_validation["jenkins.learnaws.website"] aws_route53_record.cert_validation (expand) aws_route53_record.cert_validation["jenkins.learnaws.website"] aws_acm_certificate.jenkins-lb-https (expand) aws_acm_certificate.jenkins-lb-https aws_acm_certificate.jenkins-lb-https]
+2024-06-04T15:27:04.196+0700 [DEBUG] ReferenceTransformer: "aws_vpc_peering_connection_accepter.accept_peering (expand)" references: [aws_vpc_peering_connection.useast1-uswest1 (expand) aws_vpc_peering_connection.useast1-uswest1 aws_vpc_peering_connection.useast1-uswest1]
+2024-06-04T15:27:04.196+0700 [DEBUG] ReferenceTransformer: "aws_subnet.subnet_1_cali (expand)" references: [aws_vpc.vpc_master_cali (expand) aws_vpc.vpc_master_cali aws_vpc.vpc_master_cali]
+2024-06-04T15:27:04.197+0700 [DEBUG] ReferenceTransformer: "aws_security_group.jenkins-sg (expand)" references: [aws_vpc.vpc_master aws_vpc.vpc_master aws_vpc.vpc_master (expand) var.external_ip aws_security_group.lb-sg aws_security_group.lb-sg aws_security_group.lb-sg (expand) var.webserver-port var.webserver-port]
+2024-06-04T15:27:04.197+0700 [DEBUG] ReferenceTransformer: "aws_internet_gateway.igw-cali" references: [aws_vpc.vpc_master_cali (expand) aws_vpc.vpc_master_cali aws_vpc.vpc_master_cali]
+2024-06-04T15:27:04.197+0700 [DEBUG] ReferenceTransformer: "aws_lb_listener.jenkins-listener-http" references: [aws_lb.application-lb aws_lb.application-lb aws_lb.application-lb (expand)]
+2024-06-04T15:27:04.197+0700 [DEBUG] ReferenceTransformer: "aws_instance.jenkins-master" references: [aws_main_route_table_association.set-master-default-rt-assoc aws_main_route_table_association.set-master-default-rt-assoc aws_main_route_table_association.set-master-default-rt-assoc (expand) var.instance-type data.aws_ssm_parameter.linuxAmi (expand) aws_subnet.subnet_1 aws_subnet.subnet_1 aws_subnet.subnet_1 (expand) aws_key_pair.master-key aws_key_pair.master-key aws_key_pair.master-key (expand) aws_security_group.jenkins-sg (expand) aws_security_group.jenkins-sg aws_security_group.jenkins-sg var.profile var.region-master]
+2024-06-04T15:27:04.197+0700 [DEBUG] ReferenceTransformer: "aws_vpc_peering_connection.useast1-uswest1 (expand)" references: [var.region-worker aws_vpc.vpc_master aws_vpc.vpc_master aws_vpc.vpc_master (expand) aws_vpc.vpc_master_cali (expand) aws_vpc.vpc_master_cali aws_vpc.vpc_master_cali]
+2024-06-04T15:27:04.197+0700 [DEBUG] ReferenceTransformer: "var.dns-name" references: []
+2024-06-04T15:27:04.197+0700 [DEBUG] ReferenceTransformer: "aws_security_group.jenkins-sg-cali" references: [aws_vpc.vpc_master_cali (expand) aws_vpc.vpc_master_cali aws_vpc.vpc_master_cali var.external_ip]
+2024-06-04T15:27:04.197+0700 [DEBUG] ReferenceTransformer: "aws_key_pair.master-key" references: []
+2024-06-04T15:27:04.197+0700 [DEBUG] ReferenceTransformer: "aws_lb_target_group.app-lb-tg" references: [aws_vpc.vpc_master aws_vpc.vpc_master aws_vpc.vpc_master (expand) var.webserver-port var.webserver-port]
+2024-06-04T15:27:04.197+0700 [DEBUG] ReferenceTransformer: "data.aws_route53_zone.dns (expand)" references: [var.dns-name]
+2024-06-04T15:27:04.197+0700 [DEBUG] ReferenceTransformer: "aws_key_pair.worker-key" references: []
+2024-06-04T15:27:04.197+0700 [DEBUG] ReferenceTransformer: "aws_main_route_table_association.set-master-default-rt-assoc (expand)" references: [aws_route_table.internet_route aws_route_table.internet_route aws_route_table.internet_route (expand) aws_vpc.vpc_master aws_vpc.vpc_master aws_vpc.vpc_master (expand)]
+2024-06-04T15:27:04.197+0700 [DEBUG] ReferenceTransformer: "aws_key_pair.worker-key (expand)" references: []
+2024-06-04T15:27:04.197+0700 [DEBUG] ReferenceTransformer: "aws_lb_target_group_attachment.jenkins-master-attach (expand)" references: [var.webserver-port aws_lb_target_group.app-lb-tg aws_lb_target_group.app-lb-tg aws_lb_target_group.app-lb-tg (expand) aws_instance.jenkins-master aws_instance.jenkins-master aws_instance.jenkins-master (expand)]
+2024-06-04T15:27:04.197+0700 [DEBUG] ReferenceTransformer: "aws_acm_certificate_validation.cert (expand)" references: [aws_route53_record.cert_validation (expand) aws_route53_record.cert_validation["jenkins.learnaws.website"] aws_acm_certificate.jenkins-lb-https (expand) aws_acm_certificate.jenkins-lb-https aws_acm_certificate.jenkins-lb-https aws_route53_record.cert_validation (expand) aws_route53_record.cert_validation["jenkins.learnaws.website"]]
+2024-06-04T15:27:04.197+0700 [DEBUG] ReferenceTransformer: "data.aws_ssm_parameter.linuxAmicali (expand)" references: []
+2024-06-04T15:27:04.198+0700 [DEBUG] ReferenceTransformer: "aws_internet_gateway.igw" references: [aws_vpc.vpc_master aws_vpc.vpc_master aws_vpc.vpc_master (expand)]
+2024-06-04T15:27:04.198+0700 [DEBUG] ReferenceTransformer: "aws_route53_record.jenkins" references: [data.aws_route53_zone.dns (expand) data.aws_route53_zone.dns (expand) aws_lb.application-lb aws_lb.application-lb aws_lb.application-lb (expand) aws_lb.application-lb aws_lb.application-lb aws_lb.application-lb (expand)]
+2024-06-04T15:27:04.198+0700 [DEBUG] ReferenceTransformer: "aws_acm_certificate.jenkins-lb-https" references: [data.aws_route53_zone.dns (expand)]
+2024-06-04T15:27:04.198+0700 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"].region-master" references: [var.region-master var.profile]
+2024-06-04T15:27:04.198+0700 [DEBUG] ReferenceTransformer: "aws_instance.jenkins-worker-cali[1]" references: [aws_main_route_table_association.set-worker-default-rt-assoc (expand) aws_main_route_table_association.set-worker-default-rt-assoc aws_main_route_table_association.set-worker-default-rt-assoc aws_instance.jenkins-master aws_instance.jenkins-master aws_instance.jenkins-master (expand) var.workers-count aws_key_pair.worker-key aws_key_pair.worker-key aws_key_pair.worker-key (expand) aws_security_group.jenkins-sg-cali aws_security_group.jenkins-sg-cali aws_security_group.jenkins-sg-cali (expand) aws_instance.jenkins-master aws_instance.jenkins-master aws_instance.jenkins-master (expand) var.instance-type data.aws_ssm_parameter.linuxAmicali (expand) aws_subnet.subnet_1_cali (expand) aws_subnet.subnet_1_cali aws_subnet.subnet_1_cali var.profile var.region-worker aws_instance.jenkins-master aws_instance.jenkins-master aws_instance.jenkins-master (expand)]
+2024-06-04T15:27:04.198+0700 [DEBUG] ReferenceTransformer: "aws_route53_record.jenkins (expand)" references: [data.aws_route53_zone.dns (expand) data.aws_route53_zone.dns (expand) aws_lb.application-lb aws_lb.application-lb aws_lb.application-lb (expand) aws_lb.application-lb aws_lb.application-lb aws_lb.application-lb (expand)]
+2024-06-04T15:27:04.198+0700 [DEBUG] ReferenceTransformer: "aws_route53_record.cert_validation (expand)" references: [aws_acm_certificate.jenkins-lb-https (expand) aws_acm_certificate.jenkins-lb-https aws_acm_certificate.jenkins-lb-https data.aws_route53_zone.dns (expand)]
+2024-06-04T15:27:04.198+0700 [DEBUG] ReferenceTransformer: "aws_instance.jenkins-master (expand)" references: [aws_main_route_table_association.set-master-default-rt-assoc aws_main_route_table_association.set-master-default-rt-assoc aws_main_route_table_association.set-master-default-rt-assoc (expand) var.instance-type data.aws_ssm_parameter.linuxAmi (expand) aws_subnet.subnet_1 aws_subnet.subnet_1 aws_subnet.subnet_1 (expand) aws_key_pair.master-key aws_key_pair.master-key aws_key_pair.master-key (expand) aws_security_group.jenkins-sg (expand) aws_security_group.jenkins-sg aws_security_group.jenkins-sg var.profile var.region-master]
+2024-06-04T15:27:04.198+0700 [DEBUG] ReferenceTransformer: "var.instance-type" references: []
+2024-06-04T15:27:04.198+0700 [DEBUG] ReferenceTransformer: "var.webserver-port" references: []
+2024-06-04T15:27:04.198+0700 [DEBUG] ReferenceTransformer: "aws_vpc.vpc_master" references: []
+2024-06-04T15:27:04.198+0700 [DEBUG] ReferenceTransformer: "aws_subnet.subnet_1" references: [aws_vpc.vpc_master aws_vpc.vpc_master aws_vpc.vpc_master (expand) data.aws_availability_zones.azs (expand)]
+2024-06-04T15:27:04.198+0700 [DEBUG] ReferenceTransformer: "aws_lb_listener.jenkins-listener-http (expand)" references: [aws_lb.application-lb aws_lb.application-lb aws_lb.application-lb (expand)]
+2024-06-04T15:27:04.199+0700 [DEBUG] ReferenceTransformer: "aws_subnet.subnet_1 (expand)" references: [aws_vpc.vpc_master aws_vpc.vpc_master aws_vpc.vpc_master (expand) data.aws_availability_zones.azs (expand)]
+2024-06-04T15:27:04.199+0700 [DEBUG] ReferenceTransformer: "aws_vpc.vpc_master_cali (expand)" references: []
+2024-06-04T15:27:04.199+0700 [DEBUG] ReferenceTransformer: "aws_subnet.subnet_1_cali" references: [aws_vpc.vpc_master_cali (expand) aws_vpc.vpc_master_cali aws_vpc.vpc_master_cali]
+2024-06-04T15:27:04.199+0700 [DEBUG] ReferenceTransformer: "aws_security_group.lb-sg" references: [aws_vpc.vpc_master aws_vpc.vpc_master aws_vpc.vpc_master (expand)]
+2024-06-04T15:27:04.199+0700 [DEBUG] ReferenceTransformer: "aws_vpc_peering_connection_accepter.accept_peering" references: [aws_vpc_peering_connection.useast1-uswest1 (expand) aws_vpc_peering_connection.useast1-uswest1 aws_vpc_peering_connection.useast1-uswest1]
+2024-06-04T15:27:04.199+0700 [DEBUG] ReferenceTransformer: "aws_key_pair.master-key (expand)" references: []
+2024-06-04T15:27:04.199+0700 [DEBUG] ReferenceTransformer: "aws_lb.application-lb (expand)" references: [aws_security_group.lb-sg aws_security_group.lb-sg aws_security_group.lb-sg (expand) aws_subnet.subnet_1 aws_subnet.subnet_1 aws_subnet.subnet_1 (expand) aws_subnet.subnet_2 (expand) aws_subnet.subnet_2 aws_subnet.subnet_2]
+2024-06-04T15:27:04.199+0700 [DEBUG] ReferenceTransformer: "aws_subnet.subnet_2 (expand)" references: [aws_vpc.vpc_master aws_vpc.vpc_master aws_vpc.vpc_master (expand) data.aws_availability_zones.azs (expand)]
+2024-06-04T15:27:04.199+0700 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"].region-worker" references: [var.region-worker var.profile]
+2024-06-04T15:27:04.200+0700 [DEBUG] ReferenceTransformer: "aws_security_group.jenkins-sg-cali (expand)" references: [aws_vpc.vpc_master_cali (expand) aws_vpc.vpc_master_cali aws_vpc.vpc_master_cali var.external_ip]
+2024-06-04T15:27:04.200+0700 [DEBUG] ReferenceTransformer: "aws_internet_gateway.igw (expand)" references: [aws_vpc.vpc_master aws_vpc.vpc_master aws_vpc.vpc_master (expand)]
+2024-06-04T15:27:04.200+0700 [DEBUG] ReferenceTransformer: "var.region-master" references: []
+2024-06-04T15:27:04.200+0700 [DEBUG] ReferenceTransformer: "aws_vpc_peering_connection.useast1-uswest1" references: [aws_vpc.vpc_master_cali (expand) aws_vpc.vpc_master_cali aws_vpc.vpc_master_cali var.region-worker aws_vpc.vpc_master aws_vpc.vpc_master aws_vpc.vpc_master (expand)]
+2024-06-04T15:27:04.200+0700 [DEBUG] ReferenceTransformer: "aws_internet_gateway.igw-cali (expand)" references: [aws_vpc.vpc_master_cali (expand) aws_vpc.vpc_master_cali aws_vpc.vpc_master_cali]
+2024-06-04T15:27:04.200+0700 [DEBUG] ReferenceTransformer: "output.Jenkins-Main-Node-Public-IP (expand)" references: [aws_instance.jenkins-master aws_instance.jenkins-master aws_instance.jenkins-master (expand)]
+2024-06-04T15:27:04.200+0700 [DEBUG] ReferenceTransformer: "aws_subnet.subnet_2" references: [data.aws_availability_zones.azs (expand) aws_vpc.vpc_master aws_vpc.vpc_master aws_vpc.vpc_master (expand)]
+2024-06-04T15:27:04.200+0700 [DEBUG] ReferenceTransformer: "aws_security_group.lb-sg (expand)" references: [aws_vpc.vpc_master aws_vpc.vpc_master aws_vpc.vpc_master (expand)]
+2024-06-04T15:27:04.200+0700 [DEBUG] ReferenceTransformer: "output.Jenkins-Worker-Public-IPs (expand)" references: [aws_instance.jenkins-worker-cali[1] aws_instance.jenkins-worker-cali[0] aws_instance.jenkins-worker-cali (expand)]
+2024-06-04T15:27:04.200+0700 [DEBUG] ReferenceTransformer: "var.profile" references: []
+2024-06-04T15:27:04.200+0700 [DEBUG] ReferenceTransformer: "var.workers-count" references: []
+2024-06-04T15:27:04.200+0700 [DEBUG] ReferenceTransformer: "aws_security_group.jenkins-sg" references: [aws_vpc.vpc_master aws_vpc.vpc_master aws_vpc.vpc_master (expand) var.external_ip var.webserver-port var.webserver-port aws_security_group.lb-sg aws_security_group.lb-sg aws_security_group.lb-sg (expand)]
+2024-06-04T15:27:04.201+0700 [DEBUG] ReferenceTransformer: "aws_route_table.internet_route_cali" references: [aws_vpc.vpc_master_cali (expand) aws_vpc.vpc_master_cali aws_vpc.vpc_master_cali aws_internet_gateway.igw-cali aws_internet_gateway.igw-cali aws_internet_gateway.igw-cali (expand) aws_vpc_peering_connection.useast1-uswest1 (expand) aws_vpc_peering_connection.useast1-uswest1 aws_vpc_peering_connection.useast1-uswest1]
+2024-06-04T15:27:04.201+0700 [DEBUG] ReferenceTransformer: "aws_route53_record.cert_validation[\"jenkins.learnaws.website\"]" references: [aws_acm_certificate.jenkins-lb-https (expand) aws_acm_certificate.jenkins-lb-https aws_acm_certificate.jenkins-lb-https data.aws_route53_zone.dns (expand)]
+2024-06-04T15:27:04.201+0700 [DEBUG] ReferenceTransformer: "aws_main_route_table_association.set-worker-default-rt-assoc (expand)" references: [aws_route_table.internet_route_cali aws_route_table.internet_route_cali aws_route_table.internet_route_cali (expand) aws_vpc.vpc_master_cali (expand) aws_vpc.vpc_master_cali aws_vpc.vpc_master_cali]
+2024-06-04T15:27:04.201+0700 [DEBUG] ReferenceTransformer: "aws_vpc.vpc_master (expand)" references: []
+2024-06-04T15:27:04.201+0700 [DEBUG] ReferenceTransformer: "var.external_ip" references: []
+2024-06-04T15:27:04.201+0700 [DEBUG] ReferenceTransformer: "aws_vpc.vpc_master_cali" references: []
+2024-06-04T15:27:04.201+0700 [DEBUG] ReferenceTransformer: "aws_instance.jenkins-worker-cali[0]" references: [aws_main_route_table_association.set-worker-default-rt-assoc (expand) aws_main_route_table_association.set-worker-default-rt-assoc aws_main_route_table_association.set-worker-default-rt-assoc aws_instance.jenkins-master aws_instance.jenkins-master aws_instance.jenkins-master (expand) var.workers-count var.instance-type data.aws_ssm_parameter.linuxAmicali (expand) aws_subnet.subnet_1_cali (expand) aws_subnet.subnet_1_cali aws_subnet.subnet_1_cali aws_key_pair.worker-key aws_key_pair.worker-key aws_key_pair.worker-key (expand) aws_security_group.jenkins-sg-cali aws_security_group.jenkins-sg-cali aws_security_group.jenkins-sg-cali (expand) aws_instance.jenkins-master aws_instance.jenkins-master aws_instance.jenkins-master (expand) var.profile var.region-worker aws_instance.jenkins-master aws_instance.jenkins-master aws_instance.jenkins-master (expand)]
+2024-06-04T15:27:04.201+0700 [DEBUG] ReferenceTransformer: "aws_lb_target_group.app-lb-tg (expand)" references: [aws_vpc.vpc_master aws_vpc.vpc_master aws_vpc.vpc_master (expand) var.webserver-port var.webserver-port]
+2024-06-04T15:27:04.201+0700 [DEBUG] ReferenceTransformer: "aws_route_table.internet_route_cali (expand)" references: [aws_vpc.vpc_master_cali (expand) aws_vpc.vpc_master_cali aws_vpc.vpc_master_cali aws_internet_gateway.igw-cali aws_internet_gateway.igw-cali aws_internet_gateway.igw-cali (expand) aws_vpc_peering_connection.useast1-uswest1 (expand) aws_vpc_peering_connection.useast1-uswest1 aws_vpc_peering_connection.useast1-uswest1]
+2024-06-04T15:27:04.201+0700 [DEBUG] ReferenceTransformer: "aws_instance.jenkins-worker-cali (expand)" references: [aws_main_route_table_association.set-worker-default-rt-assoc (expand) aws_main_route_table_association.set-worker-default-rt-assoc aws_main_route_table_association.set-worker-default-rt-assoc aws_instance.jenkins-master aws_instance.jenkins-master aws_instance.jenkins-master (expand) var.workers-count aws_key_pair.worker-key aws_key_pair.worker-key aws_key_pair.worker-key (expand) aws_security_group.jenkins-sg-cali aws_security_group.jenkins-sg-cali aws_security_group.jenkins-sg-cali (expand) aws_instance.jenkins-master aws_instance.jenkins-master aws_instance.jenkins-master (expand) var.instance-type data.aws_ssm_parameter.linuxAmicali (expand) aws_subnet.subnet_1_cali (expand) aws_subnet.subnet_1_cali aws_subnet.subnet_1_cali var.profile var.region-worker aws_instance.jenkins-master aws_instance.jenkins-master aws_instance.jenkins-master (expand)]
+2024-06-04T15:27:04.201+0700 [DEBUG] ReferenceTransformer: "output.url (expand)" references: [aws_route53_record.jenkins aws_route53_record.jenkins aws_route53_record.jenkins (expand)]
+2024-06-04T15:27:04.201+0700 [DEBUG] ReferenceTransformer: "aws_main_route_table_association.set-worker-default-rt-assoc" references: [aws_route_table.internet_route_cali aws_route_table.internet_route_cali aws_route_table.internet_route_cali (expand) aws_vpc.vpc_master_cali (expand) aws_vpc.vpc_master_cali aws_vpc.vpc_master_cali]
+2024-06-04T15:27:04.215+0700 [INFO]  backend/local: plan operation completed
